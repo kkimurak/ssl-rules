@@ -7,8 +7,8 @@ provided that:
 The team did not exceed the allowed number of robots when the ball entered the goal.
 * 最後にチームのロボットがボールに触れてから、ボールの高さが0.15mを超えていない。 +
 The height of the ball did not exceed 0.15 meters after the last touch of the teams robots.
-* 最後にチームのロボットがボールに触れてから、チームがいかなる<<試合の停止を伴わないファウル/Non Stopping Fouls, 試合の停止を伴わないファウル>>も犯していない。 +
-The team did not commit any <<試合の停止を伴わないファウル/Non Stopping Fouls, non stopping foul>> since the teams robots last touched the ball.
+* ボールがゴールに入る直前の2秒間に、チームがいかなる<<試合の停止を伴わないファウル/Non Stopping Fouls, 試合の停止を伴わないファウル>>も犯していない。 +
+The team did not commit any <<試合の停止を伴わないファウル/Non Stopping Fouls, non stopping foul>> in the last two seconds before the ball entered the goal.
 
 NOTE: ”チーム"はボールを蹴ったチームではなく、得点をしたチームを指す。
 例えば、相手チームのフィールド上のロボット台数が規定を超過している間はオウンゴールは認められない。 +
