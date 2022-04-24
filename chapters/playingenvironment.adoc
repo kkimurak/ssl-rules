@@ -138,6 +138,26 @@ Individual game events can be disabled completely or in some automatic referee i
 存在する実装はGithubで確認することができる。: https://github.com/RoboCup-SSL/ssl-autorefs +
 Existing implementations can be found on Github: https://github.com/RoboCup-SSL/ssl-autorefs.
 
+==== Remote Control
+A remote control for each team can optionally be provided by the tournament organizers.
+It is a physical device that allows entering the following commands:
+
+- Raise a challenge flag
+- Request a timeout
+- Request robot substitution
+- Request emergency stop
+- Change the keeper id
+
+It may also provide feedback information, like:
+
+- Number of yellow cards and when they are due
+- Number of robots currently allowed
+- Number of robots currently on the field
+
+The remote control may only be used by the <Robot Handler, robot handler>. There is always only one remote control per team, per match.
+
+The official implementation for the league can be found on GitHub: https://github.com/RoboCup-SSL/ssl-remote-control.
+
 === コミュニケーションフラッグ/Communication Flags
 
 コミュニケーションフラッグは、試合中の<<主審/Referee, 主審>>に対するジェスチャーや野次を回避するために用いられる。
@@ -154,5 +174,5 @@ Any gesturing and yelling will be considered <<非スポーツマン行為/Unspo
 リモートコントロールソフトウェアやデバイスも提供される場合があり、その場合は物理的なフラッグを置き換える。
 主催者が実行可能と判断した他の方法も使用できる。 +
 The communication flags are provided by the organizers of the competition.
-A remote control software or device can be provided and replace physical flags.
+A <<Remote Control, remote control>> software or device can be provided and replace physical flags.
 Any other solution that the organizers find feasible can also be used.
