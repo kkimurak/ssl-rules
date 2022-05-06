@@ -43,7 +43,8 @@ A robot substitution intent can be made by:
 
 . <<ハンドラー/Robot Handler, ハンドラー>>は<<Game Controller Operator, game controller operator>>に通知することで<<Game Controller, game controller>>に意図を入力する。 +
 A <<ハンドラー/Robot Handler, robot handler>> by informing the <<Game Controller Operator, game controller operator>> who in turn enters the intent into the <<Game Controller, game controller>>.
-. A <<Robot Handler, robot handler>> by using the <<Remote Control, remote control>>, if provided.
+. <<ハンドラー/Robot Handler, ハンドラー>>は、提供されていれば<<リモコン/Remote Control, リモコン>>を使用する。 +
+A <<ハンドラー/Robot Handler, robot handler>> by using the <<リモコン/Remote Control, remote control>>, if provided.
 . チームのソフトウェアは<<Game Controller, game controller>>へリクエストを送信する。 +
 A team software by sending a request to the <<Game Controller, game controller>>.
 . <<Game Controller, game controller>>は当該チームに許された最大ロボット数を超えていないかを確認し(例えばチームが<<イエローカード/Yellow Card, イエロー>>か<<レッドカード/Red Card, レッドカード>>を受け取ったあと等)、リクエストを処理する。 +

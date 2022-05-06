@@ -138,24 +138,37 @@ Individual game events can be disabled completely or in some automatic referee i
 存在する実装はGithubで確認することができる。: https://github.com/RoboCup-SSL/ssl-autorefs +
 Existing implementations can be found on Github: https://github.com/RoboCup-SSL/ssl-autorefs.
 
-==== Remote Control
+==== リモコン/Remote Control
+各チームに1台のリモコンが大会運営よりオプションで提供される。
+これは次のようなコマンドを受け付けるものである:
 A remote control for each team can optionally be provided by the tournament organizers.
 It is a physical device that allows entering the following commands:
 
-- Raise a challenge flag
-- Request a timeout
-- Request robot substitution
-- Request emergency stop
-- Change the keeper id
+- チャレンジフラッグを揚げる +
+Raise a challenge flag
+- タイムアウトを要求する +
+Request a timeout
+- ロボットの交代を要求する +
+Request robot substitution
+- 非常停止を要求する +
+Request emergency stop
+- キーパーのIDを変更する +
+Change the keeper id
 
+また、これは次のようなフィードバック情報を提供するかもしれない: +
 It may also provide feedback information, like:
 
-- Number of yellow cards and when they are due
-- Number of robots currently allowed
-- Number of robots currently on the field
+- イエローカードの枚数、およびその有効期限 +
+Number of yellow cards and when they are due
+- 現時点で許可されているロボットの台数 +
+Number of robots currently allowed
+- 現時点でフィールド上にあるロボットの台数 +
+Number of robots currently on the field
 
-The remote control may only be used by the <Robot Handler, robot handler>. There is always only one remote control per team, per match.
+リモコンは<<ハンドラー/Robot Handler, ハンドラー>>のみによって使用されるだろう。各試合において各チームに提供されるリモコンは常に1台のみである。 +
+The remote control may only be used by the <<ハンドラー/Robot Handler, robot handler>>. There is always only one remote control per team, per match.
 
+リーグでの公式な実装はGitHub上で確認できる: https://github.com/RoboCup-SSL/ssl-remote-control
 The official implementation for the league can be found on GitHub: https://github.com/RoboCup-SSL/ssl-remote-control.
 
 === コミュニケーションフラッグ/Communication Flags
@@ -171,8 +184,8 @@ The <<主審/Referee, referee>> or <<Game Controller Operator, game controller o
 Any gesturing and yelling will be considered <<非スポーツマン行為/Unsporting Behavior, unsporting behavior>>, punished by a <<レッドカード/Red Card, red card>> after the first warning.
 
 コミュニケーションフラッグは大会主催者より提供される。
-リモートコントロールソフトウェアやデバイスも提供される場合があり、その場合は物理的なフラッグを置き換える。
+<<リモコン/Remote Control, リモートコントロール>>ソフトウェアやデバイスも提供される場合があり、その場合は物理的なフラッグを置き換える。
 主催者が実行可能と判断した他の方法も使用できる。 +
 The communication flags are provided by the organizers of the competition.
-A <<Remote Control, remote control>> software or device can be provided and replace physical flags.
+A <<リモコン/Remote Control, remote control>> software or device can be provided and replace physical flags.
 Any other solution that the organizers find feasible can also be used.
