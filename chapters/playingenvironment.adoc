@@ -140,7 +140,7 @@ Existing implementations can be found on Github: https://github.com/RoboCup-SSL/
 
 ==== リモコン/Remote Control
 各チームに1台のリモコンが大会運営よりオプションで提供される。
-これは次のようなコマンドを受け付けるものである:
+これは次のようなコマンドを受け付けるものである: +
 A remote control for each team can optionally be provided by the tournament organizers.
 It is a physical device that allows entering the following commands:
 
@@ -168,7 +168,7 @@ Number of robots currently on the field
 リモコンは<<ハンドラー/Robot Handler, ハンドラー>>のみによって使用されるだろう。各試合において各チームに提供されるリモコンは常に1台のみである。 +
 The remote control may only be used by the <<ハンドラー/Robot Handler, robot handler>>. There is always only one remote control per team, per match.
 
-リーグでの公式な実装はGitHub上で確認できる: https://github.com/RoboCup-SSL/ssl-remote-control
+リーグでの公式な実装はGitHub上で確認できる: https://github.com/RoboCup-SSL/ssl-remote-control +
 The official implementation for the league can be found on GitHub: https://github.com/RoboCup-SSL/ssl-remote-control.
 
 === コミュニケーションフラッグ/Communication Flags
