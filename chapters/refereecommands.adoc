@@ -285,8 +285,8 @@ The 10 seconds can be extended indefinitely by the other team by sending an adva
 NOTE: このルールは、イエローカードを受け取った後、ゲームが自動的に停止しない可能性があることを意味する。しかしながら、例えば部品を落とすといった、イエローカードの対象となるファウルがあった場合はゲームは停止する。したがって、これらのファウルのいずれかが発生した場合、チームはロボットを手動で取り除くことができる。 +
 This rule implies that after receiving a yellow card, the game might not be automatically stopped. However, the game will be stopped if the foul that led to the yellow card causes a game stoppage, e.g. dropping parts. Therefore, if one of those fouls occurred, the team is allowed to manually remove the robot.
 
-NOTE: 2020年のルールでは、時間内にロボットを外に出せなかった場合もペナルティーは無い。したがって、ゲームはフォーススタートにより再開する。しかしながら2021年には、ロボットを手動で取り除いた場合には、ボールは当該チームのディフェンスエリアから1.5mのミッドライン上に配置され、相手チームのフリーキックとなる。 +
-In 2020 no penalty will be given to the team that couldn't get the robot out of the field in time. Thus, the game shall be restarted using a force start. However, in 2021, if the robot gets manually substituted, the ball is placed on the mid line and 1.5 meters away from the teams defense area and the opposing team gets a free kick.
+NOTE: 時間内にロボットを外に出せなかった場合もペナルティーは無い。したがって、ゲームはフォーススタートにより再開する。しかしながら将来的(おそらく2023年)にはこれは変更される: ロボットを手動で取り除いた場合には、ボールは当該チームのディフェンスエリアから1.5mのミッドライン上に配置され、相手チームのフリーキックとなる。 +
+No penalty will be given to the team that couldn't get the robot out of the field in time. Thus, the game shall be restarted using a force start. However, in the future (probably 2023) this will change: If the robot gets manually substituted, the ball is placed on the mid line and 1.5 meters away from the teams defense area and the opposing team gets a free kick.
 
 許可された台数以上のロボットがフィールド上にある間は、そのチームの得点は認められない。 +
 A team cannot score a goal while having more than the allowed number of robots on the field.
