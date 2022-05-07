@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.6.1">
-<meta name="author" content="2022-04-05">
+<meta name="author" content="2022-05-07">
 <title>RoboCup小型機リーグルール</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -430,7 +430,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.6.1">
-<meta name="author" content="2022-04-05">
+<meta name="author" content="2022-05-07">
 <title>RoboCup小型機リーグルール</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -855,7 +855,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 <h1>RoboCup小型機リーグルール</h1>
 <div class="details">
-<span id="author" class="author"><span class="diff_delete">2021-07-05</span><span class="diff_insert">2022-04-05</span></span><br>
+<span id="author" class="author"><span class="diff_delete">2021-07-05</span><span class="diff_insert">2022-05-07</span></span><br>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">目次</div>
@@ -897,6 +897,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_vision">2.3.1. Vision</a></li>
 <li><a href="#_game_controller">2.3.2. Game Controller</a></li>
 <li><a href="#_オートレフ_automatic_referee">2.3.3. オートレフ/Automatic Referee</a></li>
+<li><a href="#_リモコン_remote_control"><span class="diff_insert">2.3.4. </span><span class="diff_insert">リモコン/Remote </span><span class="diff_insert">Control</span></a></li>
 </ul>
 </li>
 <li><a href="#_コミュニケーションフラッグ_communication_flags">2.4. コミュニケーションフラッグ/Communication Flags</a></li>
@@ -1493,6 +1494,67 @@ Individual game events can be disabled completely or in some automatic referee i
 Existing implementations can be found on Github: <a href="https://github.com/RoboCup-SSL/ssl-autorefs" class="bare">https://github.com/RoboCup-SSL/ssl-autorefs</a>.</p>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_リモコン_remote_control"><span class="diff_insert">2.3.4. </span><span class="diff_insert">リモコン/Remote </span><span class="diff_insert">Control</span></h4>
+<div class="paragraph">
+<p><span class="diff_insert">各チームに1台のリモコンが大会運営よりオプションで提供される。
+これは次のようなコマンドを受け付けるものである:
+A </span><span class="diff_insert">remote </span><span class="diff_insert">control </span><span class="diff_insert">for </span><span class="diff_insert">each </span><span class="diff_insert">team </span><span class="diff_insert">can </span><span class="diff_insert">optionally </span><span class="diff_insert">be </span><span class="diff_insert">provided </span><span class="diff_insert">by </span><span class="diff_insert">the </span><span class="diff_insert">tournament </span><span class="diff_insert">organizers.
+It </span><span class="diff_insert">is </span><span class="diff_insert">a </span><span class="diff_insert">physical </span><span class="diff_insert">device </span><span class="diff_insert">that </span><span class="diff_insert">allows </span><span class="diff_insert">entering </span><span class="diff_insert">the </span><span class="diff_insert">following </span><span class="diff_insert">commands:</span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="diff_insert">チャレンジフラッグを揚げる</span><br><span class="diff_insert">
+Raise </span><span class="diff_insert">a </span><span class="diff_insert">challenge </span><span class="diff_insert">flag</span></p>
+</li>
+<li>
+<p><span class="diff_insert">タイムアウトを要求する</span><br><span class="diff_insert">
+Request </span><span class="diff_insert">a </span><span class="diff_insert">timeout</span></p>
+</li>
+<li>
+<p><span class="diff_insert">ロボットの交代を要求する</span><br><span class="diff_insert">
+Request </span><span class="diff_insert">robot </span><span class="diff_insert">substitution</span></p>
+</li>
+<li>
+<p><span class="diff_insert">非常停止を要求する</span><br><span class="diff_insert">
+Request </span><span class="diff_insert">emergency </span><span class="diff_insert">stop</span></p>
+</li>
+<li>
+<p><span class="diff_insert">キーパーのIDを変更する</span><br><span class="diff_insert">
+Change </span><span class="diff_insert">the </span><span class="diff_insert">keeper </span><span class="diff_insert">id</span></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="diff_insert">また、これは次のようなフィードバック情報を提供するかもしれない:</span><br><span class="diff_insert">
+It </span><span class="diff_insert">may </span><span class="diff_insert">also </span><span class="diff_insert">provide </span><span class="diff_insert">feedback </span><span class="diff_insert">information, </span><span class="diff_insert">like:</span></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="diff_insert">イエローカードの枚数、およびその有効期限</span><br><span class="diff_insert">
+Number </span><span class="diff_insert">of </span><span class="diff_insert">yellow </span><span class="diff_insert">cards </span><span class="diff_insert">and </span><span class="diff_insert">when </span><span class="diff_insert">they </span><span class="diff_insert">are </span><span class="diff_insert">due</span></p>
+</li>
+<li>
+<p><span class="diff_insert">現時点で許可されているロボットの台数</span><br><span class="diff_insert">
+Number </span><span class="diff_insert">of </span><span class="diff_insert">robots </span><span class="diff_insert">currently </span><span class="diff_insert">allowed</span></p>
+</li>
+<li>
+<p><span class="diff_insert">現時点でフィールド上にあるロボットの台数</span><br><span class="diff_insert">
+Number </span><span class="diff_insert">of </span><span class="diff_insert">robots </span><span class="diff_insert">currently </span><span class="diff_insert">on </span><span class="diff_insert">the </span><span class="diff_insert">field</span></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="diff_insert">リモコンは</span><a href="#_ハンドラー_robot_handler"><span class="diff_insert">ハンドラー</span></a><span class="diff_insert">のみによって使用されるだろう。各試合において各チームに提供されるリモコンは常に1台のみである。</span><br><span class="diff_insert">
+The </span><span class="diff_insert">remote </span><span class="diff_insert">control </span><span class="diff_insert">may </span><span class="diff_insert">only </span><span class="diff_insert">be </span><span class="diff_insert">used </span><span class="diff_insert">by </span><span class="diff_insert">the </span><a href="#_ハンドラー_robot_handler"><span class="diff_insert">robot </span><span class="diff_insert">handler</span></a><span class="diff_insert">. </span><span class="diff_insert">There </span><span class="diff_insert">is </span><span class="diff_insert">always </span><span class="diff_insert">only </span><span class="diff_insert">one </span><span class="diff_insert">remote </span><span class="diff_insert">control </span><span class="diff_insert">per </span><span class="diff_insert">team, </span><span class="diff_insert">per </span><span class="diff_insert">match.</span></p>
+</div>
+<div class="paragraph">
+<p><span class="diff_insert">リーグでの公式な実装はGitHub上で確認できる: </span><a href="https://github.com/RoboCup-SSL/ssl-remote-control" class="bare"><span class="diff_insert">https://github.com/RoboCup-SSL/ssl-remote-control</span></a><span class="diff_insert">
+The </span><span class="diff_insert">official </span><span class="diff_insert">implementation </span><span class="diff_insert">for </span><span class="diff_insert">the </span><span class="diff_insert">league </span><span class="diff_insert">can </span><span class="diff_insert">be </span><span class="diff_insert">found </span><span class="diff_insert">on </span><span class="diff_insert">GitHub: </span><a href="https://github.com/RoboCup-SSL/ssl-remote-control" class="bare"><span class="diff_insert">https://github.com/RoboCup-SSL/ssl-remote-control</span></a><span class="diff_insert">.</span></p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_コミュニケーションフラッグ_communication_flags">2.4. コミュニケーションフラッグ/Communication Flags</h3>
@@ -1509,11 +1571,13 @@ The <a href="#_主審_referee">referee</a> or <a href="#_game_controller_operato
 Any gesturing and yelling will be considered <a href="#_非スポーツマン行為_unsporting_behavior">unsporting behavior</a>, punished by a <a href="#_レッドカード_red_card">red card</a> after the first warning.</p>
 </div>
 <div class="paragraph">
-<p>コミュニケーションフラッグは大会主催者より提供される。
+<p><span class="diff_delete">コミュニケーションフラッグは大会主催者より提供される。
 リモートコントロールソフトウェアやデバイスも提供される場合があり、その場合は物理的なフラッグを置き換える。
-主催者が実行可能と判断した他の方法も使用できる。<br>
+主催者が実行可能と判断した他の方法も使用できる。</span><span class="diff_insert">コミュニケーションフラッグは大会主催者より提供される。
+</span><a href="#_リモコン_remote_control"><span class="diff_insert">リモートコントロール</span></a><span class="diff_insert">ソフトウェアやデバイスも提供される場合があり、その場合は物理的なフラッグを置き換える。
+主催者が実行可能と判断した他の方法も使用できる。</span><br>
 The communication flags are provided by the organizers of the competition.
-A remote control software or device can be provided and replace physical flags.
+A <a href="#_リモコン_remote_control">remote <span class="diff_delete">control </span><span class="diff_insert">control</span></a> software or device can be provided and replace physical flags.
 Any other solution that the organizers find feasible can also be used.</p>
 </div>
 </div>
@@ -2728,9 +2792,11 @@ This rule implies that after receiving a yellow card, the game might not be auto
 <td class="icon">
 <i class="fa icon-note" title="注記"></i>
 </td>
-<td class="content">
-2020年のルールでは、時間内にロボットを外に出せなかった場合もペナルティーは無い。したがって、ゲームはフォーススタートにより再開する。しかしながら2021年には、ロボットを手動で取り除いた場合には、ボールは当該チームのディフェンスエリアから1.5mのミッドライン上に配置され、相手チームのフリーキックとなる。<br>
-In 2020 no penalty will be given to the team that couldn&#8217;t get the robot out of the field in time. Thus, the game shall be restarted using a force start. However, in 2021, if the robot gets manually substituted, the ball is placed on the mid line and 1.5 meters away from the teams defense area and the opposing team gets a free kick.
+<td class="content"><span class="diff_delete">
+2020年のルールでは、時間内にロボットを外に出せなかった場合もペナルティーは無い。したがって、ゲームはフォーススタートにより再開する。しかしながら2021年には、ロボットを手動で取り除いた場合には、ボールは当該チームのディフェンスエリアから1.5mのミッドライン上に配置され、相手チームのフリーキックとなる。</span><span class="diff_insert">
+時間内にロボットを外に出せなかった場合もペナルティーは無い。したがって、ゲームはフォーススタートにより再開する。しかしながら将来的(おそらく2023年)にはこれは変更される: </span><span class="diff_insert">ロボットを手動で取り除いた場合には、ボールは当該チームのディフェンスエリアから1.5mのミッドライン上に配置され、相手チームのフリーキックとなる。</span><br><span class="diff_delete">
+In </span><span class="diff_delete">2020 </span><span class="diff_delete">no </span><span class="diff_insert">
+No </span>penalty will be given to the team that couldn&#8217;t get the robot out of the field in time. Thus, the game shall be restarted using a force start. However, in <span class="diff_delete">2021, </span><span class="diff_delete">if </span><span class="diff_insert">the </span><span class="diff_insert">future </span><span class="diff_insert">(probably </span><span class="diff_insert">2023) </span><span class="diff_insert">this </span><span class="diff_insert">will </span><span class="diff_insert">change: </span><span class="diff_insert">If </span>the robot gets manually substituted, the ball is placed on the mid line and 1.5 meters away from the teams defense area and the opposing team gets a free kick.
 </td>
 </tr>
 </table>
@@ -3467,7 +3533,7 @@ The <a href="#_ハンドラー_robot_handler">robot handler</a> should prefer to
 </div>
 <div class="paragraph">
 <p>以下のすべての条件に適合する場合は、ゲーム中のいつでも<a href="#_主審_referee">主審</a>に確認を取ることなくロボットを交代させることができる:<br>
-Robots can always be substituted during game play without notifying the <a href="#_主審_referee">referee</a> if all the following conditions are met:</p>
+Robots can always be <span class="diff_delete">substituted </span><span class="diff_insert">taken </span><span class="diff_insert">in </span><span class="diff_insert">and </span><span class="diff_insert">out </span>during game play without notifying the <a href="#_主審_referee">referee</a> if all the following conditions are met:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -3487,10 +3553,19 @@ The ball must be at least 2 meters away from the halfway line.</p>
 </div>
 <div class="paragraph">
 <p>加えて、<a href="#_試合の停止_stopping_the_game">ストップゲーム中</a>であれば、ロボットはどの位置からでも以下の手順に従い<a href="#_ハンドラー_robot_handler">ハンドラー</a>により交代させられる:<br>
-Additionally, robots can be taken out from any position during <a href="#_試合の停止_stopping_the_game">game stoppage</a> by the <a href="#_ハンドラー_robot_handler">robot handler</a> using the procedure below:</p>
+Additionally, robots can be taken out from any position <span class="diff_delete">during </span><a href="#_試合の停止_stopping_the_game"><span class="diff_delete">game </span><span class="diff_delete">stoppage</span></a> <span class="diff_delete">by </span><span class="diff_delete">the </span><a href="#_ハンドラー_robot_handler"><span class="diff_delete">robot </span><span class="diff_delete">handler</span></a> <span class="diff_insert">on </span><span class="diff_insert">request </span>using the procedure below:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
+<li>
+<p><span class="diff_insert">The </span><a href="#Robot Handler"><span class="diff_insert">robot </span><span class="diff_insert">handler</span></a> <span class="diff_insert">requests </span><span class="diff_insert">robot </span><span class="diff_insert">substitution </span><span class="diff_insert">at </span><span class="diff_insert">any </span><span class="diff_insert">time.</span></p>
+</li>
+<li>
+<p><span class="diff_insert">The </span><a href="#_game_controller"><span class="diff_insert">game </span><span class="diff_insert">controller</span></a> <span class="diff_insert">will </span><a href="#Halt"><span class="diff_insert">halt</span></a> <span class="diff_insert">the </span><span class="diff_insert">game </span><span class="diff_insert">at </span><span class="diff_insert">the </span><span class="diff_insert">next </span><span class="diff_insert">opportunity.</span></p>
+</li>
+<li>
+<p><span class="diff_insert">The </span><a href="#Robot Handler"><span class="diff_insert">robot </span><span class="diff_insert">handler</span></a> <span class="diff_insert">may </span><span class="diff_insert">enter </span><span class="diff_insert">the </span><span class="diff_insert">field </span><span class="diff_insert">and </span><span class="diff_insert">touch </span><span class="diff_insert">robots </span><span class="diff_insert">now, </span><span class="diff_insert">as </span><span class="diff_insert">long </span><span class="diff_insert">as </span><span class="diff_insert">the </span><span class="diff_insert">game </span><span class="diff_insert">is </span><span class="diff_insert">still </span><a href="#Halt"><span class="diff_insert">halted</span></a><span class="diff_insert">.</span></p>
+</li>
 <li>
 <p><a href="#_ハンドラー_robot_handler">ハンドラー</a>はロボットを外に出す<br>
 The <a href="#_ハンドラー_robot_handler">robot handler</a> takes robots out.</p>
@@ -3529,6 +3604,10 @@ A robot substitution intent can be made by:</p>
 A <a href="#_ハンドラー_robot_handler">robot handler</a> by informing the <a href="#_game_controller_operator">game controller operator</a> who in turn enters the intent into the <a href="#_game_controller">game controller</a>.</p>
 </li>
 <li>
+<p><a href="#_ハンドラー_robot_handler"><span class="diff_insert">ハンドラー</span></a><span class="diff_insert">は、提供されていれば</span><a href="#_リモコン_remote_control"><span class="diff_insert">リモコン</span></a><span class="diff_insert">を使用する。</span><br><span class="diff_insert">
+A </span><a href="#_ハンドラー_robot_handler"><span class="diff_insert">robot </span><span class="diff_insert">handler</span></a> <span class="diff_insert">by </span><span class="diff_insert">using </span><span class="diff_insert">the </span><a href="#_リモコン_remote_control"><span class="diff_insert">remote </span><span class="diff_insert">control</span></a><span class="diff_insert">, </span><span class="diff_insert">if </span><span class="diff_insert">provided.</span></p>
+</li>
+<li>
 <p>チームのソフトウェアは<a href="#_game_controller">game controller</a>へリクエストを送信する。<br>
 A team software by sending a request to the <a href="#_game_controller">game controller</a>.</p>
 </li>
@@ -3540,7 +3619,7 @@ The <a href="#_game_controller">game controller</a> itself if a team exceeds the
 </div>
 <div class="paragraph">
 <p>片方のチームの交代の意図のために試合がハルトされた場合、少なくとも一度の交代(ロボットの除去、もしくは投入)が行われなければならない。交代のために試合がハルトされていない場合に限り交代の意図を取り消すことができる。<br>
-If the game was halted due to a substitution intent by a team, at least one substitution (taking a robot out or putting one in) must be performed by this team. A substitution intent can be revoked unless the game was not already halted for substitution.</p>
+If the game was halted due to a substitution intent by a team, at least one <span class="diff_delete">substitution </span><span class="diff_delete">(taking </span><span class="diff_delete">a </span>robot <span class="diff_delete">out </span><span class="diff_delete">or </span><span class="diff_delete">putting </span><span class="diff_delete">one </span><span class="diff_delete">in) </span>must be <span class="diff_delete">performed </span><span class="diff_insert">taken </span><span class="diff_insert">out </span>by this team. A substitution intent can be revoked unless the game was not already halted for substitution.</p>
 </div>
 <div class="paragraph">
 <p>ボール配置後、試合が継続する直前にどちらかのチームがロボットを交代する意思がある場合、<a href="#_game_controller">game controller</a>は自動的に試合を<a href="#_ハルト_halt">ハルト</a>する。<br>
@@ -4420,7 +4499,7 @@ Division A has shorter timeouts in some situations</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-最終更新 <span class="diff_delete">2021-07-05 </span><span class="diff_delete">14:28:59 </span><span class="diff_insert">2022-04-05 </span><span class="diff_insert">14:26:40 </span>GMT
+最終更新 <span class="diff_delete">2021-07-05 </span><span class="diff_delete">14:28:59 </span><span class="diff_insert">2022-05-07 </span><span class="diff_insert">06:29:16 </span>GMT
 </div>
 </div>
 </body>
