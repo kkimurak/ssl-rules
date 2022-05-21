@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.6.1">
-<meta name="author" content="2022-05-07">
+<meta name="author" content="2022-05-21">
 <title>RoboCup小型機リーグルール</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -430,7 +430,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 <h1>RoboCup小型機リーグルール</h1>
 <div class="details">
-<span id="author" class="author">2022-05-07</span><br>
+<span id="author" class="author">2022-05-21</span><br>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">目次</div>
@@ -1071,7 +1071,7 @@ Existing implementations can be found on Github: <a href="https://github.com/Rob
 <h4 id="_リモコン_remote_control">2.3.4. リモコン/Remote Control</h4>
 <div class="paragraph">
 <p>各チームに1台のリモコンが大会運営よりオプションで提供される。
-これは次のようなコマンドを受け付けるものである:
+これは次のようなコマンドを受け付けるものである:<br>
 A remote control for each team can optionally be provided by the tournament organizers.
 It is a physical device that allows entering the following commands:</p>
 </div>
@@ -1124,7 +1124,7 @@ Number of robots currently on the field</p>
 The remote control may only be used by the <a href="#_ハンドラー_robot_handler">robot handler</a>. There is always only one remote control per team, per match.</p>
 </div>
 <div class="paragraph">
-<p>リーグでの公式な実装はGitHub上で確認できる: <a href="https://github.com/RoboCup-SSL/ssl-remote-control" class="bare">https://github.com/RoboCup-SSL/ssl-remote-control</a>
+<p>リーグでの公式な実装はGitHub上で確認できる: <a href="https://github.com/RoboCup-SSL/ssl-remote-control" class="bare">https://github.com/RoboCup-SSL/ssl-remote-control</a><br>
 The official implementation for the league can be found on GitHub: <a href="https://github.com/RoboCup-SSL/ssl-remote-control" class="bare">https://github.com/RoboCup-SSL/ssl-remote-control</a>.</p>
 </div>
 </div>
@@ -1133,7 +1133,7 @@ The official implementation for the league can be found on GitHub: <a href="http
 <h3 id="_コミュニケーションフラッグ_communication_flags">2.4. コミュニケーションフラッグ/Communication Flags</h3>
 <div class="paragraph">
 <p>コミュニケーションフラッグは、試合中の<a href="#_主審_referee">主審</a>に対するジェスチャーや野次を回避するために用いられる。
-これらのフラッグは<a href="#タイムアウト/Timeout">タイムアウト</a>や<a href="#_非常停止_emergency_stop">非常停止</a>、<a href="#_ロボットの交代_robot_substitution">手動でのロボットの交代</a>、<a href="#_チャレンジフラッグ_challenge_flags">チャレンジ</a>など、さまざまな場面で用いられる。<br>
+これらのフラッグは<a href="#_タイムアウト_timeouts">タイムアウト</a>や<a href="#_非常停止_emergency_stop">非常停止</a>、<a href="#_ロボットの交代_robot_substitution">手動でのロボットの交代</a>、<a href="#_チャレンジフラッグ_challenge_flags">チャレンジ</a>など、さまざまな場面で用いられる。<br>
 The communication flags are used to avoid gesturing and yelling with the <a href="#_主審_referee">referee</a> during a match.
 These flags are responsible for communicating various intents, such as: <a href="#_タイムアウト_timeouts">timeouts</a>, <a href="#_非常停止_emergency_stop">emergency stops</a>, <a href="#_ロボットの交代_robot_substitution">manual robot substitution</a> and <a href="#_チャレンジフラッグ_challenge_flags">challenges</a>.</p>
 </div>
@@ -3100,7 +3100,7 @@ Robots are substituted by the <a href="#_ハンドラー_robot_handler">robot ha
 The <a href="#_ハンドラー_robot_handler">robot handler</a> should prefer to use long sleeves and colors that won&#8217;t interfere with the vision system.</p>
 </div>
 <div class="paragraph">
-<p>以下のすべての条件に適合する場合は、ゲーム中のいつでも<a href="#_主審_referee">主審</a>に確認を取ることなくロボットを交代させることができる:<br>
+<p>以下のすべての条件に適合する場合は、ゲーム中のいつでも<a href="#_主審_referee">主審</a>に確認を取ることなくロボットを投入もしくは除去することができる:<br>
 Robots can always be taken in and out during game play without notifying the <a href="#_主審_referee">referee</a> if all the following conditions are met:</p>
 </div>
 <div class="olist arabic">
@@ -3120,19 +3120,22 @@ The ball must be at least 2 meters away from the halfway line.</p>
 </ol>
 </div>
 <div class="paragraph">
-<p>加えて、<a href="#_試合の停止_stopping_the_game">ストップゲーム中</a>であれば、ロボットはどの位置からでも以下の手順に従い<a href="#_ハンドラー_robot_handler">ハンドラー</a>により交代させられる:<br>
+<p>加えて、要求があればロボットはどの位置からでも以下の手順に従い除去させられる:<br>
 Additionally, robots can be taken out from any position on request using the procedure below:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>The <a href="#Robot Handler">robot handler</a> requests robot substitution at any time.</p>
+<p>任意の時点で<a href="#_ハンドラー_robot_handler">ハンドラー</a>がロボットの交代を要求する。<br>
+The <a href="#_ハンドラー_robot_handler">robot handler</a> requests robot substitution at any time.</p>
 </li>
 <li>
-<p>The <a href="#_game_controller">game controller</a> will <a href="#Halt">halt</a> the game at the next opportunity.</p>
+<p><a href="#_game_controller">Game Controller</a>が次の機会に<a href="#_ハルト_halt">ハルト</a>により試合を停止させる。<br>
+The <a href="#_game_controller">game controller</a> will <a href="#_ハルト_halt">halt</a> the game at the next opportunity.</p>
 </li>
 <li>
-<p>The <a href="#Robot Handler">robot handler</a> may enter the field and touch robots now, as long as the game is still <a href="#Halt">halted</a>.</p>
+<p><a href="#_ハンドラー_robot_handler">ハンドラー</a>は試合が<a href="#_ハルト_halt">ハルト</a>により停止している間、必要に応じてフィールドに入りロボットに触れる。<br>
+The <a href="#_ハンドラー_robot_handler">robot handler</a> may enter the field and touch robots now, as long as the game is still <a href="#_ハルト_halt">halted</a>.</p>
 </li>
 <li>
 <p><a href="#_ハンドラー_robot_handler">ハンドラー</a>はロボットを外に出す<br>
@@ -3186,7 +3189,7 @@ The <a href="#_game_controller">game controller</a> itself if a team exceeds the
 </ol>
 </div>
 <div class="paragraph">
-<p>片方のチームの交代の意図のために試合がハルトされた場合、少なくとも一度の交代(ロボットの除去、もしくは投入)が行われなければならない。交代のために試合がハルトされていない場合に限り交代の意図を取り消すことができる。<br>
+<p>片方のチームの交代の意図のために試合がハルトされた場合、少なくとも一台のロボットが除去されなければならない。交代のために試合がハルトされていない場合に限り交代の意図を取り消すことができる。<br>
 If the game was halted due to a substitution intent by a team, at least one robot must be taken out by this team. A substitution intent can be revoked unless the game was not already halted for substitution.</p>
 </div>
 <div class="paragraph">
@@ -4067,7 +4070,7 @@ Division A has shorter timeouts in some situations</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-最終更新 2022-05-07 06:29:16 GMT
+最終更新 2022-05-21 09:06:50 GMT
 </div>
 </div>
 </body>
