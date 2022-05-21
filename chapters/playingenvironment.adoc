@@ -174,7 +174,7 @@ The official implementation for the league can be found on GitHub: https://githu
 === コミュニケーションフラッグ/Communication Flags
 
 コミュニケーションフラッグは、試合中の<<主審/Referee, 主審>>に対するジェスチャーや野次を回避するために用いられる。
-これらのフラッグは<<タイムアウト/Timeout, タイムアウト>>や<<非常停止/Emergency stop, 非常停止>>、<<ロボットの交代/Robot Substitution, 手動でのロボットの交代>>、<<チャレンジフラッグ/Challenge Flags, チャレンジ>>など、さまざまな場面で用いられる。 +
+これらのフラッグは<<タイムアウト/Timeouts, タイムアウト>>や<<非常停止/Emergency stop, 非常停止>>、<<ロボットの交代/Robot Substitution, 手動でのロボットの交代>>、<<チャレンジフラッグ/Challenge Flags, チャレンジ>>など、さまざまな場面で用いられる。 +
 The communication flags are used to avoid gesturing and yelling with the <<主審/Referee, referee>> during a match.
 These flags are responsible for communicating various intents, such as: <<タイムアウト/Timeouts, timeouts>>, <<非常停止/Emergency stop, emergency stops>>, <<ロボットの交代/Robot Substitution, manual robot substitution>> and <<チャレンジフラッグ/Challenge Flags, challenges>>.
 
