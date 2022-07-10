@@ -60,7 +60,7 @@ After the ball has been placed, a <<フリーキック/Free Kick, free kick>> is
 
 .用途/Usage
 ボールがロボットに触れたあと、ボールが他のロボットに触れることなく、ミッドラインに交差して相手チームのゴールラインからフィールド外にボールが出たとき、それはエイムレスキックである。 +
-A kick is aimless when after the ball touched a robot, it subsequently crossed the midline and then its opponent's goal line outside the goal without touching another robot.
+A kick is aimless when after the ball touched a robot, it subsequently crossed the halfline and then its opponent's goal line outside the goal without touching another robot.
 
 キックオフ時のキックは、ボールがミッドライン上に位置しておりミッドラインに交差していないため、エイムレスキックにはならない。 +
 A kick-off kick cannot be aimless, as the ball is located at the midline and does therefore not cross it.
