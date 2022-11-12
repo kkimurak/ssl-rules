@@ -68,8 +68,8 @@ A defense area is defined as a rectangle touching the goal lines centrally in fr
 
 
 ===== ペナルティーマーク/Penalty Mark
-それぞれのディフェンスエリアのペナルティーマークは(ハーフウェーラインではなく)<<追加のライン/Additional Lines, ミッドライン>>上の、相手チームのゴールのセンターから8m(ディヴィジョンA)もしくは6m(ディヴィジョンB)の地点にある。 +
-For each field half the penalty mark is on the <<追加のライン/Additional Lines, mid-line>> (not halfway line), 8 meters (division A) or 6 meters (division B) away from the opponent goal center.
+ペナルティーマークは一方のチームがもう一方のチームに対してペナルティーキックを行う際の開始点を定義する。ペナルティーマークは(ハーフウェーラインではなく)<<追加のライン/Additional Lines, ミッドライン>>上の、相手チームのゴールのセンターから8m(ディヴィジョンA)もしくは6m(ディヴィジョンB)の点に位置する。 +
+The penalty mark defines the point from which a team executes a penalty kick against the opponent goal. It is located on the <<追加のライン/Additional Lines, mid-line>> (not halfway line) and 8 meters (division A) or 6 meters (division B) away from the opponent's goal center.
 
 ==== ゴール/Goals
 ゴールはそれぞれのゴールラインの中央に配置し、しっかりと固定されなければならない。ゴールは高さ0.16mの2枚の垂直なサイドウォールと1枚の垂直なリヤウォールがつながって構成されている。ゴールの内側は、ボールの衝撃を吸収し偏向速度を減じるための材質 - 例えば発泡材など - で覆われる必要がある。ゴールの内壁は白色で、外壁と角および上面は黒色で塗装される。 +
