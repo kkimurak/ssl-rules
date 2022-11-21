@@ -51,19 +51,23 @@ Distances between lines are measured from their centers.
 プレイエリアは4本のラインで定義される。2本の長辺はタッチラインと呼ばれ、2本の短辺はゴールラインと呼ばれる。 +
 The playing area is defined by four field lines. The two longer field lines are called touch lines. The two shorter field lines are called goal lines.
 
-===== Halfway Line
+===== ハーフウェーライン/Halfway Line
+競技フィールドは、フィールドの短辺方向に走りフィールド中央を通るハーフウェーラインによって2つに分断される。
+ハーフウェーラインはゴールラインと平行である。 +
 The field of play is divided into two halves by a halfway line that runs along the width of the field and through the center of the field.
 The  halfway line is parallel to the goal lines.
 
-===== Goal-to-Goal Line
+===== ゴール・トゥ・ゴールライン/Goal-to-Goal Line
+ゴール・トゥ・ゴールラインはフィールドの長辺方向に走り、ゴールとフィールドの中央を通る。ゴール・トゥ・ゴールラインはタッチラインと平行である。 +
 The goal-to-goal line runs along the length of the field, passing through the center of the goals and the field. The goal-to-goal line is parallel to the touch lines.
 
-NOTE: This line is used to provide adequate features for the geometry calibration of the <<Vision, vision software>> and for optional local localisation of robots.
+NOTE: このラインは<<Vision, visionソフトウェア>>の座標補正や、ロボットによる自己位置推定に適切な機能を提供するために使用されていた。 +
+This line is used to provide adequate features for the geometry calibration of the <<Vision, vision software>> and for optional local localisation of robots.
 
 ===== センターサークル/Center Circle
-ハーフウェーラインの中央にセンターマークが印されている。サークルの直径はどちらのディヴィジョンでも1mである。 +
+センターサークルはフィールドの中央に印されており、直径は1メートルである。センターサークルの中心は<<ハーフウェーライン/Halfway Line, ハーフウェーライン>>と<<ゴール・トゥ・ゴールライン/Goal-to-Goal Line, ゴール・トゥ・ゴールライン>>の交点にある。 +
 The center circle is located at the center of the field with a diameter of 1 meter.
-The center is at the crossing of the <<Halfway Line, halfway line>> and the <<Goal-to-Goal Line, goal-to-goal line>>.
+The center is at the crossing of the <<ハーフウェーライン/Halfway Line, halfway line>> and the <<ゴール・トゥ・ゴールライン/Goal-to-Goal Line, goal-to-goal line>>.
 
 ===== ディフェンスエリア/Defense Area
 ディフェンスエリアは中心から見て両端にある<<ゴール/Goals, ゴール>>と接するゴールラインと接する長方形で定義される。ディフェンスエリアの大きさは<<field-dimensions-a, 図1>>と<<field-dimensions-b, 図2>>に示される通り、ディヴィジョンAであれば3.6m×1.8m、ディヴィジョンBであれば2m×1mである。 +
@@ -71,8 +75,8 @@ A defense area is defined as a rectangle touching the goal lines centrally in fr
 
 
 ===== ペナルティーマーク/Penalty Mark
-ペナルティーマークは一方のチームがもう一方のチームに対してペナルティーキックを行う際の開始点を定義する。ペナルティーマークは(ハーフウェーラインではなく)<<追加のライン/Additional Lines, ミッドライン>>上の、相手チームのゴールのセンターから8m(ディヴィジョンA)もしくは6m(ディヴィジョンB)の点に位置する。 +
-The penalty mark defines the point from which a team executes a penalty kick against the opponent goal. It is located on the <<Goal-to-Goal Line, goal-to-goal line>> and 8 meters (division A) or 6 meters (division B) away from the opponent's goal center.
+ペナルティーマークは一方のチームがもう一方のチームに対してペナルティーキックを行う際の開始点を定義する。ペナルティーマークは<<ゴール・トゥ・ゴールライン/Goal-to-Goal Line, ゴール・トゥ・ゴールライン>>上の、相手チームのゴールのセンターから8m(ディヴィジョンA)もしくは6m(ディヴィジョンB)の点に位置する。 +
+The penalty mark defines the point from which a team executes a penalty kick against the opponent goal. It is located on the <<ゴール・トゥ・ゴールライン/Goal-to-Goal Line, goal-to-goal line>> and 8 meters (division A) or 6 meters (division B) away from the opponent's goal center.
 
 ==== ゴール/Goals
 ゴールはそれぞれのゴールラインの中央に配置し、しっかりと固定されなければならない。ゴールは高さ0.16mの2枚の垂直なサイドウォールと1枚の垂直なリヤウォールがつながって構成されている。ゴールの内側は、ボールの衝撃を吸収し偏向速度を減じるための材質 - 例えば発泡材など - で覆われる必要がある。ゴールの内壁は白色で、外壁と角および上面は黒色で塗装される。 +
