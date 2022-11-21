@@ -430,7 +430,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.16">
-<meta name="author" content="2022-11-13">
+<meta name="author" content="2022-11-22">
 <title>RoboCup小型機リーグルール</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -867,7 +867,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 <h1>RoboCup小型機リーグルール</h1>
 <div class="details">
-<span id="author" class="author"><span class="diff_delete">2021-07-05</span><span class="diff_insert">2022-11-13</span></span><br>
+<span id="author" class="author"><span class="diff_delete">2021-07-05</span><span class="diff_insert">2022-11-22</span></span><br>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">目次</div>
@@ -894,8 +894,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_フィールドのマーキング_field_markings"><a href="#_フィールドのマーキングfield_markings">2.1.3. フィールドのマーキング/Field Markings</a>
 <ul class="sectlevel4">
 <li><a href="#_フィールドライン_field_lines"><a href="#_フィールドラインfield_lines">フィールドライン/Field Lines</a></li>
-<li><a href="#_追加のライン_additional_lines"><a href="#_追加のラインadditional_lines">追加のライン/Additional Lines</a></li>
-<li><a href="#_センターサークル_center_circle"><a href="#_センターサークルcenter_circle">センターサークル/Center Circle</a></li>
+<li><a href="#_追加のライン_additional_lines"><span class="diff_delete">追加のライン/Additional </span><span class="diff_delete">Lines</span><a href="#_ハーフウェーラインhalfway_line"><span class="diff_insert">ハーフウェーライン/Halfway </span><span class="diff_insert">Line</span></a></li>
+<li><a href="#_センターサークル_center_circle"><a href="#_ゴールトゥゴールラインgoal_to_goal_line"><span class="diff_insert">ゴール・トゥ・ゴールライン/Goal-to-Goal </span><span class="diff_insert">Line</span></a></li>
+<li><a href="#_センターサークルcenter_circle">センターサークル/Center Circle</a></li>
 <li><a href="#_ディフェンスエリア_defense_area"><a href="#_ディフェンスエリアdefense_area">ディフェンスエリア/Defense Area</a></li>
 <li><a href="#_ペナルティーマーク_penalty_mark"><a href="#_ペナルティーマークpenalty_mark">ペナルティーマーク/Penalty Mark</a></li>
 </ul>
@@ -1338,21 +1339,48 @@ The playing area is defined by four field lines. The two longer field lines are 
 </div>
 </div>
 <div class="sect4">
-<h5 id="_追加のライン_additional_lines"><h5 id="_追加のラインadditional_lines">追加のライン/Additional Lines</h5>
+<h5 id="_追加のライン_additional_lines"><span class="diff_delete">追加のライン/Additional </span><span class="diff_delete">Lines</span><h5 id="_ハーフウェーラインhalfway_line"><span class="diff_insert">ハーフウェーライン/Halfway </span><span class="diff_insert">Line</span></h5>
 <div class="paragraph">
-<p>競技フィールドは、フィールド中心からフィールドの両端に引かれているハーフウェーラインによって半分に分割される。ハーフウェーラインはゴールラインと平行である。<br>
-The field of play is divided into two halves by a halfway line that runs along the width of the field and through the center of the field. The halfway line is parallel to the goal lines.</p>
-</div>
-<div class="paragraph">
-<p>ミッドラインはフィールド中心からフィールドの長さ方向に沿って引かれている。ミッドラインはタッチラインと平行である。このラインは<a href="#_vision">visionソフトウェア</a>のジオメトリのキャリブレーションを適切に行うために必要な機能を提供するために使用される。<br>
-A mid-line runs along the length of the field, passing through the center of the field. The mid-line is parallel to the touch lines. This line is used to provide adequate features for the geometry calibration of the <a href="#_vision">vision software</a>.</p>
+<p><span class="diff_delete">競技フィールドは、フィールド中心からフィールドの両端に引かれているハーフウェーラインによって半分に分割される。ハーフウェーラインはゴールラインと平行である。</span><span class="diff_insert">競技フィールドは、フィールドの短辺方向に走りフィールド中央を通るハーフウェーラインによって2つに分断される。
+ハーフウェーラインはゴールラインと平行である。</span><br>
+The field of play is divided into two halves by a halfway line that runs along the width of the field and through the center of the <span class="diff_delete">field. </span><span class="diff_delete">The </span><span class="diff_insert">field.
+The </span> halfway line is parallel to the goal lines.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_センターサークル_center_circle"><h5 id="_センターサークルcenter_circle">センターサークル/Center Circle</h5>
+<h5 id="_ゴールトゥゴールラインgoal_to_goal_line"><span class="diff_insert">ゴール・トゥ・ゴールライン/Goal-to-Goal </span><span class="diff_insert">Line</span></h5>
 <div class="paragraph">
-<p>ハーフウェーラインの中央にセンターマークが印されている。サークルの直径はどちらのディヴィジョンでも1mである。<br>
-The center mark is indicated at the midpoint of the halfway line. A circle with a diameter of 1 meter is marked around it for both divisions.</p>
+<p><span class="diff_delete">ミッドラインはフィールド中心からフィールドの長さ方向に沿って引かれている。ミッドラインはタッチラインと平行である。このラインは</span><a href="#_vision"><span class="diff_delete">visionソフトウェア</span></a><span class="diff_delete">のジオメトリのキャリブレーションを適切に行うために必要な機能を提供するために使用される。</span><span class="diff_insert">ゴール・トゥ・ゴールラインはフィールドの長辺方向に走り、ゴールとフィールドの中央を通る。ゴール・トゥ・ゴールラインはタッチラインと平行である。</span><br><span class="diff_delete">
+A </span><span class="diff_delete">mid-line </span><span class="diff_insert">
+The </span><span class="diff_insert">goal-to-goal </span><span class="diff_insert">line </span>runs along the length of the field, passing through the center of the <span class="diff_insert">goals </span><span class="diff_insert">and </span><span class="diff_insert">the </span>field. The <span class="diff_delete">mid-line </span><span class="diff_insert">goal-to-goal </span><span class="diff_insert">line </span>is parallel to the touch <span class="diff_delete">lines. </span><span class="diff_delete">This </span><span class="diff_insert">lines.</span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="注記"></i>
+</td>
+<td class="content"><span class="diff_insert">
+このラインは</span><a href="#_vision"><span class="diff_insert">visionソフトウェア</span></a><span class="diff_insert">の座標補正や、ロボットによる自己位置推定に適切な機能を提供するために使用されていた。</span><br><span class="diff_insert">
+This </span>line is used to provide adequate features for the geometry calibration of the <a href="#_vision">vision software</a> <span class="diff_insert">and </span><span class="diff_insert">for </span><span class="diff_insert">optional </span><span class="diff_insert">local </span><span class="diff_insert">localisation </span><span class="diff_insert">of </span><span class="diff_insert">robots.
+</span></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_センターサークルcenter_circle"><span class="diff_insert">センターサークル/Center </span><span class="diff_insert">Circle</span></h5>
+<div class="paragraph">
+<p><span class="diff_insert">センターサークルはフィールドの中央に印されており、直径は1メートルである。センターサークルの中心は</span><a href="#_ハーフウェーラインhalfway_line"><span class="diff_insert">ハーフウェーライン</span></a><span class="diff_insert">と</span><a href="#_ゴールトゥゴールラインgoal_to_goal_line"><span class="diff_insert">ゴール・トゥ・ゴールライン</span></a><span class="diff_insert">の交点にある。</span><br><span class="diff_insert">
+The </span><span class="diff_insert">center </span><span class="diff_insert">circle </span><span class="diff_insert">is </span><span class="diff_insert">located </span><span class="diff_insert">at </span><span class="diff_insert">the </span><span class="diff_insert">center </span><span class="diff_insert">of </span><span class="diff_insert">the </span><span class="diff_insert">field </span><span class="diff_insert">with </span><span class="diff_insert">a </span><span class="diff_insert">diameter </span><span class="diff_insert">of </span><span class="diff_insert">1 </span><span class="diff_insert">meter.
+The </span><span class="diff_insert">center </span><span class="diff_insert">is </span><span class="diff_insert">at </span><span class="diff_insert">the </span><span class="diff_insert">crossing </span><span class="diff_insert">of </span><span class="diff_insert">the </span><a href="#_ハーフウェーラインhalfway_line"><span class="diff_insert">halfway </span><span class="diff_insert">line</span></a> <span class="diff_insert">and </span><span class="diff_insert">the </span><a href="#_ゴールトゥゴールラインgoal_to_goal_line"><span class="diff_insert">goal-to-goal </span><span class="diff_insert">line</span></a>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_センターサークル_center_circle"><span class="diff_delete">センターサークル/Center </span><span class="diff_delete">Circle</span></h5>
+<div class="paragraph">
+<p><span class="diff_delete">ハーフウェーラインの中央にセンターマークが印されている。サークルの直径はどちらのディヴィジョンでも1mである。</span><br><span class="diff_delete">
+The </span><span class="diff_delete">center </span><span class="diff_delete">mark </span><span class="diff_delete">is </span><span class="diff_delete">indicated </span><span class="diff_delete">at </span><span class="diff_delete">the </span><span class="diff_delete">midpoint </span><span class="diff_delete">of </span><span class="diff_delete">the </span><span class="diff_delete">halfway </span><span class="diff_delete">line. </span><span class="diff_delete">A </span><span class="diff_delete">circle </span><span class="diff_delete">with </span><span class="diff_delete">a </span><span class="diff_delete">diameter </span><span class="diff_delete">of </span><span class="diff_delete">1 </span><span class="diff_delete">meter </span><span class="diff_delete">is </span><span class="diff_delete">marked </span><span class="diff_delete">around </span><span class="diff_delete">it </span><span class="diff_delete">for </span><span class="diff_delete">both </span><span class="diff_delete">divisions.</span></p>
 </div>
 </div>
 <div class="sect4">
@@ -1365,9 +1393,9 @@ A defense area is defined as a rectangle touching the goal lines centrally in fr
 <div class="sect4">
 <h5 id="_ペナルティーマーク_penalty_mark"><h5 id="_ペナルティーマークpenalty_mark">ペナルティーマーク/Penalty Mark</h5>
 <div class="paragraph">
-<p><span class="diff_delete">それぞれのディフェンスエリアのペナルティーマークは(ハーフウェーラインではなく)</span><a href="#_追加のライン_additional_lines"><span class="diff_insert">ペナルティーマークは一方のチームがもう一方のチームに対してペナルティーキックを行う際の開始点を定義する。ペナルティーマークは(ハーフウェーラインではなく)</span><a href="#_追加のラインadditional_lines">ミッドライン</a><span class="diff_delete">上の、相手チームのゴールのセンターから8m(ディヴィジョンA)もしくは6m(ディヴィジョンB)の地点にある。</span><span class="diff_insert">上の、相手チームのゴールのセンターから8m(ディヴィジョンA)もしくは6m(ディヴィジョンB)の点に位置する。</span><br><span class="diff_delete">
+<p><span class="diff_delete">それぞれのディフェンスエリアのペナルティーマークは(ハーフウェーラインではなく)</span><a href="#_追加のライン_additional_lines"><span class="diff_delete">ミッドライン</span><span class="diff_insert">ペナルティーマークは一方のチームがもう一方のチームに対してペナルティーキックを行う際の開始点を定義する。ペナルティーマークは</span><a href="#_ゴールトゥゴールラインgoal_to_goal_line"><span class="diff_insert">ゴール・トゥ・ゴールライン</span></a><span class="diff_delete">上の、相手チームのゴールのセンターから8m(ディヴィジョンA)もしくは6m(ディヴィジョンB)の地点にある。</span><span class="diff_insert">上の、相手チームのゴールのセンターから8m(ディヴィジョンA)もしくは6m(ディヴィジョンB)の点に位置する。</span><br><span class="diff_delete">
 For </span><span class="diff_delete">each </span><span class="diff_delete">field </span><span class="diff_delete">half </span><span class="diff_delete">the </span><span class="diff_insert">
-The </span>penalty mark <span class="diff_insert">defines </span><span class="diff_insert">the </span><span class="diff_insert">point </span><span class="diff_insert">from </span><span class="diff_insert">which </span><span class="diff_insert">a </span><span class="diff_insert">team </span><span class="diff_insert">executes </span><span class="diff_insert">a </span><span class="diff_insert">penalty </span><span class="diff_insert">kick </span><span class="diff_insert">against </span><span class="diff_insert">the </span><span class="diff_insert">opponent </span><span class="diff_insert">goal. </span><span class="diff_insert">It </span>is <span class="diff_insert">located </span>on the <a href="#_追加のライン_additional_lines"><a href="#_追加のラインadditional_lines">mid-line</a> (not halfway <span class="diff_delete">line), </span><span class="diff_insert">line) </span><span class="diff_insert">and </span>8 meters (division A) or 6 meters (division B) away from the <span class="diff_delete">opponent </span><span class="diff_insert">opponent&#8217;s </span>goal center.</p>
+The </span>penalty mark <span class="diff_insert">defines </span><span class="diff_insert">the </span><span class="diff_insert">point </span><span class="diff_insert">from </span><span class="diff_insert">which </span><span class="diff_insert">a </span><span class="diff_insert">team </span><span class="diff_insert">executes </span><span class="diff_insert">a </span><span class="diff_insert">penalty </span><span class="diff_insert">kick </span><span class="diff_insert">against </span><span class="diff_insert">the </span><span class="diff_insert">opponent </span><span class="diff_insert">goal. </span><span class="diff_insert">It </span>is <span class="diff_insert">located </span>on the <a href="#_追加のライン_additional_lines"><span class="diff_delete">mid-line</span><a href="#_ゴールトゥゴールラインgoal_to_goal_line"><span class="diff_insert">goal-to-goal </span><span class="diff_insert">line</span></a> <span class="diff_delete">(not </span><span class="diff_delete">halfway </span><span class="diff_delete">line), </span><span class="diff_insert">and </span>8 meters (division A) or 6 meters (division B) away from the <span class="diff_delete">opponent </span><span class="diff_insert">opponent&#8217;s </span>goal center.</p>
 </div>
 </div>
 </div>
@@ -2807,9 +2835,9 @@ This rule implies that after receiving a yellow card, the game might not be auto
 </td>
 <td class="content"><span class="diff_delete">
 2020年のルールでは、時間内にロボットを外に出せなかった場合もペナルティーは無い。したがって、ゲームはフォーススタートにより再開する。しかしながら2021年には、ロボットを手動で取り除いた場合には、ボールは当該チームのディフェンスエリアから1.5mのミッドライン上に配置され、相手チームのフリーキックとなる。</span><span class="diff_insert">
-時間内にロボットを外に出せなかった場合もペナルティーは無い。したがって、ゲームはフォーススタートにより再開する。しかしながら将来的(おそらく2023年)にはこれは変更される: </span><span class="diff_insert">ロボットを手動で取り除いた場合には、ボールは当該チームのディフェンスエリアから1.5mのミッドライン上に配置され、相手チームのフリーキックとなる。</span><br><span class="diff_delete">
+時間内にロボットを外に出せなかった場合もペナルティーは無い。したがって、ゲームはフォーススタートにより再開する。しかしながら将来的(おそらく2023年)にはこれは変更される: </span><span class="diff_insert">ロボットを手動で取り除いた場合には、ボールは当該チームのディフェンスエリアから1.5mの</span><a href="#_ゴールトゥゴールラインgoal_to_goal_line"><span class="diff_insert">ゴール・トゥ・ゴールライン</span></a><span class="diff_insert">上に配置され、相手チームのフリーキックとなる。</span><br><span class="diff_delete">
 In </span><span class="diff_delete">2020 </span><span class="diff_delete">no </span><span class="diff_insert">
-No </span>penalty will be given to the team that couldn&#8217;t get the robot out of the field in time. Thus, the game shall be restarted using a force start. However, in <span class="diff_delete">2021, </span><span class="diff_delete">if </span><span class="diff_insert">the </span><span class="diff_insert">future </span><span class="diff_insert">(probably </span><span class="diff_insert">2023) </span><span class="diff_insert">this </span><span class="diff_insert">will </span><span class="diff_insert">change: </span><span class="diff_insert">If </span>the robot gets manually substituted, the ball is placed on the mid line and 1.5 meters away from the teams defense area and the opposing team gets a free kick.
+NOTE: </span><span class="diff_insert">No </span>penalty will be given to the team that couldn&#8217;t get the robot out of the field in time. Thus, the game shall be restarted using a force start. However, in <span class="diff_delete">2021, </span><span class="diff_delete">if </span><span class="diff_insert">the </span><span class="diff_insert">future </span><span class="diff_insert">(probably </span><span class="diff_insert">2023) </span><span class="diff_insert">this </span><span class="diff_insert">will </span><span class="diff_insert">change: </span><span class="diff_insert">If </span>the robot gets manually substituted, the ball is placed on the <span class="diff_delete">mid </span><span class="diff_delete">line </span><a href="#_ゴールトゥゴールラインgoal_to_goal_line"><span class="diff_insert">goal-to-goal </span><span class="diff_insert">line</span></a> and 1.5 meters away from the teams defense area and the opposing team gets a free kick.
 </td>
 </tr>
 </table>
@@ -3000,8 +3028,8 @@ After the ball has been placed, a <a href="#_フリーキック_free_kick"><a hr
 A kick is aimless when after the ball touched a robot, it subsequently crossed the <span class="diff_delete">midline </span><span class="diff_insert">halfline </span>and then its opponent&#8217;s goal line outside the goal without touching another robot.</p>
 </div>
 <div class="paragraph">
-<p>キックオフ時のキックは、ボールがミッドライン上に位置しておりミッドラインに交差していないため、エイムレスキックにはならない。<br>
-A kick-off kick cannot be aimless, as the ball is located at the midline and does therefore not cross it.</p>
+<p><span class="diff_delete">キックオフ時のキックは、ボールがミッドライン上に位置しておりミッドラインに交差していないため、エイムレスキックにはならない。</span><span class="diff_insert">キックオフ時のキックは、ボールが</span><a href="#_ハーフウェーラインhalfway_line"><span class="diff_insert">ハーフウェーライン</span></a><span class="diff_insert">上に位置しており交差していないため、エイムレスキックにはならない。</span><br>
+A kick-off kick cannot be aimless, as the ball is located <span class="diff_delete">at </span><span class="diff_insert">on </span>the <span class="diff_delete">midline </span><a href="#_ハーフウェーラインhalfway_line"><span class="diff_insert">halfway </span><span class="diff_insert">line</span></a> and does therefore not cross it.</p>
 </div>
 </div>
 </div>
@@ -3555,12 +3583,12 @@ Robots can always be <span class="diff_delete">substituted </span><span class="d
 The robot is at least partially inside the <a href="#_フィールドの表面_field_surface"><a href="#_フィールドの表面field_surface">field margin</a>.</p>
 </li>
 <li>
-<p>ロボットはハーフウェーラインから1mを超えない位置にある。<br>
-The robot is at a distance from the halfway line that must not exceed 1 meter.</p>
+<p><span class="diff_delete">ロボットはハーフウェーラインから1mを超えない位置にある。</span><span class="diff_insert">ロボットは</span><a href="#_ハーフウェーラインhalfway_line"><span class="diff_insert">ハーフウェーライン</span></a><span class="diff_insert">から1mを超えない位置にある。</span><br>
+The robot is at a distance from the <a href="#_ハーフウェーラインhalfway_line">halfway <span class="diff_delete">line </span><span class="diff_insert">line</span></a> that must not exceed 1 meter.</p>
 </li>
 <li>
-<p>ボールはハーフウェーラインから少なくとも2m離れた地点にある。<br>
-The ball must be at least 2 meters away from the halfway line.</p>
+<p><span class="diff_delete">ボールはハーフウェーラインから少なくとも2m離れた地点にある。</span><span class="diff_insert">ボールは</span><a href="#_ハーフウェーラインhalfway_line"><span class="diff_insert">ハーフウェーライン</span></a><span class="diff_insert">から少なくとも2m離れた地点にある。</span><br>
+The ball must be at least 2 meters away from the <a href="#_ハーフウェーラインhalfway_line">halfway <span class="diff_delete">line.</span><span class="diff_insert">line</span></a><span class="diff_insert">.</span></p>
 </li>
 </ol>
 </div>
@@ -4516,7 +4544,7 @@ Division A has shorter timeouts in some situations</p>
 <div id="footer">
 <div id="footer-text">
 最終更新 <span class="diff_delete">2021-07-05 </span><span class="diff_delete">14:28:59 </span><span class="diff_delete">GMT
-</span><span class="diff_insert">2022-11-13 </span><span class="diff_insert">00:19:23 </span><span class="diff_insert">+0900
+</span><span class="diff_insert">2022-11-22 </span><span class="diff_insert">00:42:01 </span><span class="diff_insert">+0900
 </span></div>
 </div>
 </body>
