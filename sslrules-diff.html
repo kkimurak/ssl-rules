@@ -3534,11 +3534,13 @@ speed limit is to avoid robots harming the people on the field.
 During <a href="#_ボール配置_ball_placement"><a href="#_ボール配置ball_placement">ball placement</a>, all robots of the non-placing team have to keep at least 0.5 meters distance to the line between the ball and the placement position (the forbidden area forms a stadium shape).</p>
 </div>
 <div class="paragraph">
-<p>ボール配置を担当しないチームのロボットが2秒以上に亘ってボールと配置場所を結ぶラインに接近した場合、ファウルとなる。この場合、ボール配置を行える時間が10秒だけ追加される。<br>
+<p><span class="diff_delete">ボール配置を担当しないチームのロボットが2秒以上に亘ってボールと配置場所を結ぶラインに接近した場合、ファウルとなる。この場合、ボール配置を行える時間が10秒だけ追加される。</span><span class="diff_insert">ボール配置を担当しないチームのロボットが2秒以上に亘ってボールと配置場所を結ぶラインに接近した場合、ファウルとなる。この場合、ボール配置を行える時間が10秒だけ追加される。
+1回のボール配置フェイズにつき1度の干渉のみをファウルとして計上する。ただしボール配置の猶予時間は干渉が起こるたびに延長される。</span><br>
 If a robot of the non-placing team is too close to the line between
 the ball and the placement position for more than 2 seconds, it
 commits a foul. In this case, 10 seconds are added to the ball
-placement timer.</p>
+placement <span class="diff_delete">timer.</span><span class="diff_insert">timer.
+Only </span><span class="diff_insert">one </span><span class="diff_insert">interference </span><span class="diff_insert">foul </span><span class="diff_insert">per </span><span class="diff_insert">ball </span><span class="diff_insert">placement </span><span class="diff_insert">phase </span><span class="diff_insert">counts </span><span class="diff_insert">towards </span><span class="diff_insert">the </span><span class="diff_insert">foul </span><span class="diff_insert">counter, </span><span class="diff_insert">but </span><span class="diff_insert">the </span><span class="diff_insert">placement </span><span class="diff_insert">timer </span><span class="diff_insert">is </span><span class="diff_insert">always </span><span class="diff_insert">incremented.</span></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3552,6 +3554,19 @@ placement timer.</p>
 This rule does not cover all cases of ball placement interference.
 The <a href="#_主審_referee"><a href="#_主審referee">referee</a> is encouraged to call fouls if the non-placing team is obviously interfering with the ball placement.
 </td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="注記"></i>
+</td>
+<td class="content"><span class="diff_insert">
+もしロボットが(たとえば立ち往生を起こした、動作できない、など)干渉を続ける場合、人間の審判はボール配置を止めて手動でボールを配置することが推奨される。</span><br><span class="diff_insert">
+If </span><span class="diff_insert">a </span><span class="diff_insert">robot </span><span class="diff_insert">keeps </span><span class="diff_insert">interfering </span><span class="diff_insert">the </span><span class="diff_insert">ball </span><span class="diff_insert">placement </span><span class="diff_insert">(for </span><span class="diff_insert">example </span><span class="diff_insert">if </span><span class="diff_insert">it </span><span class="diff_insert">is </span><span class="diff_insert">stuck </span><span class="diff_insert">or </span><span class="diff_insert">can </span><span class="diff_insert">not </span><span class="diff_insert">move), </span><span class="diff_insert">the </span><span class="diff_insert">human </span><span class="diff_insert">referee </span><span class="diff_insert">is </span><span class="diff_insert">encouraged </span><span class="diff_insert">to </span><span class="diff_insert">stop </span><span class="diff_insert">the </span><span class="diff_insert">placement </span><span class="diff_insert">and </span><span class="diff_insert">place </span><span class="diff_insert">the </span><span class="diff_insert">ball </span><span class="diff_insert">manually.
+</span></td>
 </tr>
 </table>
 </div>
@@ -4544,7 +4559,7 @@ Division A has shorter timeouts in some situations</p>
 <div id="footer">
 <div id="footer-text">
 最終更新 <span class="diff_delete">2021-07-05 </span><span class="diff_delete">14:28:59 </span><span class="diff_delete">GMT
-</span><span class="diff_insert">2022-11-22 </span><span class="diff_insert">00:42:01 </span><span class="diff_insert">+0900
+</span><span class="diff_insert">2022-11-22 </span><span class="diff_insert">23:12:41 </span><span class="diff_insert">+0900
 </span></div>
 </div>
 </body>
