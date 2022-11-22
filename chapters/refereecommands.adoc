@@ -31,7 +31,8 @@ also used to recalibrate the vision software during a game if the vision expert 
 「ハルト」コマンドの後は常に「ストップ」コマンドが送信される。 +
 The halt command is always followed up by stop.
 
-NOTE: As a rule of thumb, the game should always be halted when humans other than the referees are entering the field.
+NOTE: 経験則として、審判以外の人間がフィールドに立ち入る場合には、試合は常に「ハルト」コマンドで停止されるべきである。 +
+As a rule of thumb, the game should always be halted when humans other than the referees are entering the field.
 
 
 === ボール配置/Ball Placement
@@ -41,7 +42,8 @@ After the game was stopped, the ball must be placed on the appropriate position,
 The automatic ball placement is the preferred way to place the ball at the designated position on the field by the robots of the teams without human interaction.
 If this is not possible, the <<主審/Referee, referee>> places the ball manually.
 
-NOTE: During manual ball placement, the game should be in <<Stop, stop>> to allow robots to prepare for game continuation.
+NOTE: 手動でのボール配置中、ロボットが次の展開に備えるために試合は<<停止/Stop, 「ストップ」>>コマンドにより停止される必要がある。 +
+During manual ball placement, the game should be in <<停止/Stop, stop>> to allow robots to prepare for game continuation.
 
 以下の条件が全て満たされている場合、ボール配置は必要ない: +
 No ball placement is required if all of the following constraints are fulfilled:
