@@ -87,11 +87,11 @@ Team members are generally advised not to talk to the vision expert, unless they
 
 .職務/Duties
 
-* Vision expartはVisionのハードウェアをチェックし、あらゆる種類のハードウェアの問題を<<技術委員会/Technical Committee, 技術委員会>>に報告する。 +
+* Vision expertはVisionのハードウェアをチェックし、あらゆる種類のハードウェアの問題を<<技術委員会/Technical Committee, 技術委員会>>に報告する。 +
 The vision expert checks the vision hardware and reports any kind of hardware problems to the <<技術委員会/Technical Committee, technical committee>>
-* Vision expartは試合中に共有Visionシステムを監視し、あらゆる種類の問題を主審に即座に報告する。 +
+* Vision expertは試合中に共有Visionシステムを監視し、あらゆる種類の問題を主審に即座に報告する。 +
 The vision expert monitors the shared vision system during the match and reports any kind of problems to the referee instantly
-* 主審が必要であると考えた場合には、Vision expartはVision systemを再キャリブレーションする。 +
+* 主審が必要であると考えた場合には、Vision expertはVision systemを再キャリブレーションする。 +
 The vision expert recalibrates the vision system if the referee deems it necessary
 
 NOTE: (訳者注記)日本では一般的に「ビジョン」と呼称されることが多い。Visionソフトウェアそのものと混同される懸念があるが、Vision Expertが呼ばれるということはVisionソフトウェアに異常がある場合が大半であり、運用する上で支障があることはあまりない。
