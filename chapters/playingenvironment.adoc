@@ -116,7 +116,9 @@ Each field is provided with a shared central vision server and a set of shared c
 競技会の主催者からの発表があった場合や特別に許可されている場合を除いて、共有ビジョン機器のそばに、チーム独自のカメラや外部のセンサを取り付けることは許されない。 +
 Besides the shared vision equipment, teams are not allowed to mount their own cameras or other external sensors, unless specifically announced or permitted by the respective competition organizers.
 
-SSL-Vision defines an additional https://github.com/RoboCup-SSL/ssl-vision/blob/master/src/shared/proto/messages_robocup_ssl_wrapper_tracked.proto[tracker protocol] that contains filtered and enriched tracking data. Messages are not published by SSL-Vision itself, but for example by some <<Automatic Referee, automatic referees>>.
+SSL-Vision は、フィルタリングされ拡充されたデータを含む追加の https://github.com/RoboCup-SSL/ssl-vision/blob/master/src/shared/proto/messages_robocup_ssl_wrapper_tracked.proto[tracker protocol] を定義する。このメッセージは SSL-Vision それ自身によって公開されることは無いが、たとえばいずれかの<<オートレフ/Automatic Referee, オートレフ>>がそれを行う事がある。
+これは<<Game Controller, Game Controller>>や、洗練されたフィルタを保有していないチームによって使用される事を意図している。 +
+SSL-Vision defines an additional https://github.com/RoboCup-SSL/ssl-vision/blob/master/src/shared/proto/messages_robocup_ssl_wrapper_tracked.proto[tracker protocol] that contains filtered and enriched tracking data. Messages are not published by SSL-Vision itself, but for example by some <<オートレフ/Automatic Referee, automatic referees>>.
 It is meant to be used by the <<Game Controller, game controller>> and by teams that do not yet have their own sophisticated filter.
 
 NOTE: (訳者注記)一般的に「ビジョン」と呼称されることが多い。
