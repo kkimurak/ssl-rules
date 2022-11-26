@@ -1039,6 +1039,12 @@ Each field is provided with a shared central vision server and a set of shared c
 <p>競技会の主催者からの発表があった場合や特別に許可されている場合を除いて、共有ビジョン機器のそばに、チーム独自のカメラや外部のセンサを取り付けることは許されない。<br>
 Besides the shared vision equipment, teams are not allowed to mount their own cameras or other external sensors, unless specifically announced or permitted by the respective competition organizers.</p>
 </div>
+<div class="paragraph">
+<p>SSL-Vision は、フィルタリングされ拡充されたデータを含む追加の <a href="https://github.com/RoboCup-SSL/ssl-vision/blob/master/src/shared/proto/messages_robocup_ssl_wrapper_tracked.proto">tracker protocol</a> を定義する。このメッセージは SSL-Vision それ自身によって公開されることは無いが、たとえばいずれかの<a href="#_オートレフautomatic_referee">オートレフ</a>がそれを行う事がある。
+これは<a href="#_game_controller">Game Controller</a>や、洗練されたフィルタを保有していないチームによって使用される事を意図している。<br>
+SSL-Vision defines an additional <a href="https://github.com/RoboCup-SSL/ssl-vision/blob/master/src/shared/proto/messages_robocup_ssl_wrapper_tracked.proto">tracker protocol</a> that contains filtered and enriched tracking data. Messages are not published by SSL-Vision itself, but for example by some <a href="#_オートレフautomatic_referee">automatic referees</a>.
+It is meant to be used by the <a href="#_game_controller">game controller</a> and by teams that do not yet have their own sophisticated filter.</p>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -4145,7 +4151,7 @@ Division A has shorter timeouts in some situations</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-最終更新 2022-11-26 15:21:52 +0900
+最終更新 2022-11-26 15:22:42 +0900
 </div>
 </div>
 </body>

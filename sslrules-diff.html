@@ -1475,6 +1475,12 @@ Each field is provided with a shared central vision server and a set of shared c
 <p>競技会の主催者からの発表があった場合や特別に許可されている場合を除いて、共有ビジョン機器のそばに、チーム独自のカメラや外部のセンサを取り付けることは許されない。<br>
 Besides the shared vision equipment, teams are not allowed to mount their own cameras or other external sensors, unless specifically announced or permitted by the respective competition organizers.</p>
 </div>
+<div class="paragraph">
+<p><span class="diff_insert">SSL-Vision </span><span class="diff_insert">は、フィルタリングされ拡充されたデータを含む追加の </span><a href="https://github.com/RoboCup-SSL/ssl-vision/blob/master/src/shared/proto/messages_robocup_ssl_wrapper_tracked.proto"><span class="diff_insert">tracker </span><span class="diff_insert">protocol</span></a> <span class="diff_insert">を定義する。このメッセージは </span><span class="diff_insert">SSL-Vision </span><span class="diff_insert">それ自身によって公開されることは無いが、たとえばいずれかの</span><a href="#_オートレフautomatic_referee"><span class="diff_insert">オートレフ</span></a><span class="diff_insert">がそれを行う事がある。
+これは</span><a href="#_game_controller"><span class="diff_insert">Game </span><span class="diff_insert">Controller</span></a><span class="diff_insert">や、洗練されたフィルタを保有していないチームによって使用される事を意図している。</span><br><span class="diff_insert">
+SSL-Vision </span><span class="diff_insert">defines </span><span class="diff_insert">an </span><span class="diff_insert">additional </span><a href="https://github.com/RoboCup-SSL/ssl-vision/blob/master/src/shared/proto/messages_robocup_ssl_wrapper_tracked.proto"><span class="diff_insert">tracker </span><span class="diff_insert">protocol</span></a> <span class="diff_insert">that </span><span class="diff_insert">contains </span><span class="diff_insert">filtered </span><span class="diff_insert">and </span><span class="diff_insert">enriched </span><span class="diff_insert">tracking </span><span class="diff_insert">data. </span><span class="diff_insert">Messages </span><span class="diff_insert">are </span><span class="diff_insert">not </span><span class="diff_insert">published </span><span class="diff_insert">by </span><span class="diff_insert">SSL-Vision </span><span class="diff_insert">itself, </span><span class="diff_insert">but </span><span class="diff_insert">for </span><span class="diff_insert">example </span><span class="diff_insert">by </span><span class="diff_insert">some </span><a href="#_オートレフautomatic_referee"><span class="diff_insert">automatic </span><span class="diff_insert">referees</span></a><span class="diff_insert">.
+It </span><span class="diff_insert">is </span><span class="diff_insert">meant </span><span class="diff_insert">to </span><span class="diff_insert">be </span><span class="diff_insert">used </span><span class="diff_insert">by </span><span class="diff_insert">the </span><a href="#_game_controller"><span class="diff_insert">game </span><span class="diff_insert">controller</span></a> <span class="diff_insert">and </span><span class="diff_insert">by </span><span class="diff_insert">teams </span><span class="diff_insert">that </span><span class="diff_insert">do </span><span class="diff_insert">not </span><span class="diff_insert">yet </span><span class="diff_insert">have </span><span class="diff_insert">their </span><span class="diff_insert">own </span><span class="diff_insert">sophisticated </span><span class="diff_insert">filter.</span></p>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -4587,7 +4593,7 @@ Division A has shorter timeouts in some situations</p>
 <div id="footer">
 <div id="footer-text">
 最終更新 <span class="diff_delete">2021-07-05 </span><span class="diff_delete">14:28:59 </span><span class="diff_delete">GMT
-</span><span class="diff_insert">2022-11-26 </span><span class="diff_insert">15:21:52 </span><span class="diff_insert">+0900
+</span><span class="diff_insert">2022-11-26 </span><span class="diff_insert">15:22:42 </span><span class="diff_insert">+0900
 </span></div>
 </div>
 </body>
