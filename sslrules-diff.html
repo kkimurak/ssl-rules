@@ -2343,7 +2343,7 @@ There is a grace period of 2 seconds for the robots to brake.</p>
 <div class="paragraph">
 <div class="title">用途/Usage</div>
 <p>(例えばロボットが制御不能になった時など)緊急事態が発生した時に主審は「ハルト」コマンドで試合を中断させることができる。また、Vision expertが必要と判断した場合にはVisionソフトウェアの再キャリブレーションにも使われ、主審が同意する場合には<a href="#_ロボットの交代_robot_substitution"><a href="#_ロボットの交代robot_substitution">ロボットの交代</a>にも使われる。さらに、主審は自由に「ハルト」コマンドを発行することができる。<br>
-The halt command allows the referee to interrupt the game immediately whenever an emergency occurs (for example when a robot gets out of contol). It is
+The halt command allows the referee to interrupt the game immediately whenever an emergency occurs (for example when a robot gets out of <span class="diff_delete">contol). </span><span class="diff_insert">control). </span>It is
 also used to recalibrate the vision software during a game if the vision expert considers it necessary and the referee agrees and for <a href="#_ロボットの交代_robot_substitution"><a href="#_ロボットの交代robot_substitution">robot substitution</a>. Additionally, the referee is free to issue the halt command at will.</p>
 </div>
 <div class="paragraph">
@@ -2351,6 +2351,19 @@ also used to recalibrate the vision software during a game if the vision expert 
 The halt command is always followed up by <span class="diff_delete">stop.</span><span class="diff_insert">stop.
 Enough </span><span class="diff_insert">preparation </span><span class="diff_insert">time </span><span class="diff_insert">should </span><span class="diff_insert">be </span><span class="diff_insert">given </span><span class="diff_insert">to </span><span class="diff_insert">teams, </span><span class="diff_insert">before </span><span class="diff_insert">the </span><span class="diff_insert">game </span><span class="diff_insert">is </span><span class="diff_insert">continued.
 The </span><a href="#_game_controller"><span class="diff_insert">game </span><span class="diff_insert">controller</span></a> <span class="diff_insert">will </span><span class="diff_insert">wait </span><span class="diff_insert">for </span><span class="diff_insert">up </span><span class="diff_insert">to </span><span class="diff_insert">10 </span><span class="diff_insert">seconds </span><span class="diff_insert">after </span><span class="diff_insert">a </span><span class="diff_insert">halt </span><span class="diff_insert">command, </span><span class="diff_insert">but </span><span class="diff_insert">the </span><span class="diff_insert">game </span><span class="diff_insert">can </span><span class="diff_insert">be </span><span class="diff_insert">continued </span><span class="diff_insert">if </span><span class="diff_insert">robots </span><span class="diff_insert">are </span><span class="diff_insert">prepared </span><span class="diff_insert">already.</span></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="注記"></i>
+</td>
+<td class="content"><span class="diff_insert">
+経験則として、審判以外の人間がフィールドに立ち入る場合には、試合は常に「ハルト」コマンドで停止されるべきである。</span><br><span class="diff_insert">
+As </span><span class="diff_insert">a </span><span class="diff_insert">rule </span><span class="diff_insert">of </span><span class="diff_insert">thumb, </span><span class="diff_insert">the </span><span class="diff_insert">game </span><span class="diff_insert">should </span><span class="diff_insert">always </span><span class="diff_insert">be </span><span class="diff_insert">halted </span><span class="diff_insert">when </span><span class="diff_insert">humans </span><span class="diff_insert">other </span><span class="diff_insert">than </span><span class="diff_insert">the </span><span class="diff_insert">referees </span><span class="diff_insert">are </span><span class="diff_insert">entering </span><span class="diff_insert">the </span><span class="diff_insert">field.
+</span></td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -2362,6 +2375,19 @@ The </span><a href="#_game_controller"><span class="diff_insert">game </span><sp
 After the game was stopped, the ball must be placed on the appropriate position, depending on the event that occurred.
 The automatic ball placement is the preferred way to place the ball at the designated position on the field by the robots of the teams without human interaction.
 If this is not possible, the <a href="#_主審_referee"><a href="#_主審referee">referee</a> places the ball manually.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="注記"></i>
+</td>
+<td class="content"><span class="diff_insert">
+手動でのボール配置中、ロボットが次の展開に備えるために試合は</span><a href="#_停止stop"><span class="diff_insert">「ストップ」</span></a><span class="diff_insert">コマンドにより停止される必要がある。</span><br><span class="diff_insert">
+During </span><span class="diff_insert">manual </span><span class="diff_insert">ball </span><span class="diff_insert">placement, </span><span class="diff_insert">the </span><span class="diff_insert">game </span><span class="diff_insert">should </span><span class="diff_insert">be </span><span class="diff_insert">in </span><a href="#_停止stop"><span class="diff_insert">stop</span></a> <span class="diff_insert">to </span><span class="diff_insert">allow </span><span class="diff_insert">robots </span><span class="diff_insert">to </span><span class="diff_insert">prepare </span><span class="diff_insert">for </span><span class="diff_insert">game </span><span class="diff_insert">continuation.
+</span></td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>以下の条件が全て満たされている場合、ボール配置は必要ない:<br>
@@ -4561,7 +4587,7 @@ Division A has shorter timeouts in some situations</p>
 <div id="footer">
 <div id="footer-text">
 最終更新 <span class="diff_delete">2021-07-05 </span><span class="diff_delete">14:28:59 </span><span class="diff_delete">GMT
-</span><span class="diff_insert">2022-11-26 </span><span class="diff_insert">15:20:17 </span><span class="diff_insert">+0900
+</span><span class="diff_insert">2022-11-26 </span><span class="diff_insert">15:21:52 </span><span class="diff_insert">+0900
 </span></div>
 </div>
 </body>

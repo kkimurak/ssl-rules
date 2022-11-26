@@ -1904,7 +1904,7 @@ There is a grace period of 2 seconds for the robots to brake.</p>
 <div class="paragraph">
 <div class="title">用途/Usage</div>
 <p>(例えばロボットが制御不能になった時など)緊急事態が発生した時に主審は「ハルト」コマンドで試合を中断させることができる。また、Vision expertが必要と判断した場合にはVisionソフトウェアの再キャリブレーションにも使われ、主審が同意する場合には<a href="#_ロボットの交代robot_substitution">ロボットの交代</a>にも使われる。さらに、主審は自由に「ハルト」コマンドを発行することができる。<br>
-The halt command allows the referee to interrupt the game immediately whenever an emergency occurs (for example when a robot gets out of contol). It is
+The halt command allows the referee to interrupt the game immediately whenever an emergency occurs (for example when a robot gets out of control). It is
 also used to recalibrate the vision software during a game if the vision expert considers it necessary and the referee agrees and for <a href="#_ロボットの交代robot_substitution">robot substitution</a>. Additionally, the referee is free to issue the halt command at will.</p>
 </div>
 <div class="paragraph">
@@ -1912,6 +1912,19 @@ also used to recalibrate the vision software during a game if the vision expert 
 The halt command is always followed up by stop.
 Enough preparation time should be given to teams, before the game is continued.
 The <a href="#_game_controller">game controller</a> will wait for up to 10 seconds after a halt command, but the game can be continued if robots are prepared already.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="注記"></i>
+</td>
+<td class="content">
+経験則として、審判以外の人間がフィールドに立ち入る場合には、試合は常に「ハルト」コマンドで停止されるべきである。<br>
+As a rule of thumb, the game should always be halted when humans other than the referees are entering the field.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -1923,6 +1936,19 @@ The <a href="#_game_controller">game controller</a> will wait for up to 10 secon
 After the game was stopped, the ball must be placed on the appropriate position, depending on the event that occurred.
 The automatic ball placement is the preferred way to place the ball at the designated position on the field by the robots of the teams without human interaction.
 If this is not possible, the <a href="#_主審referee">referee</a> places the ball manually.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="注記"></i>
+</td>
+<td class="content">
+手動でのボール配置中、ロボットが次の展開に備えるために試合は<a href="#_停止stop">「ストップ」</a>コマンドにより停止される必要がある。<br>
+During manual ball placement, the game should be in <a href="#_停止stop">stop</a> to allow robots to prepare for game continuation.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>以下の条件が全て満たされている場合、ボール配置は必要ない:<br>
@@ -4119,7 +4145,7 @@ Division A has shorter timeouts in some situations</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-最終更新 2022-11-26 15:20:17 +0900
+最終更新 2022-11-26 15:21:52 +0900
 </div>
 </div>
 </body>
