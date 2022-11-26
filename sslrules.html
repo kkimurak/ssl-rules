@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.16">
-<meta name="author" content="2022-11-22">
+<meta name="author" content="2022-11-26">
 <title>RoboCup小型機リーグルール</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -442,7 +442,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 <h1>RoboCup小型機リーグルール</h1>
 <div class="details">
-<span id="author" class="author">2022-11-22</span><br>
+<span id="author" class="author">2022-11-26</span><br>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">目次</div>
@@ -1908,8 +1908,10 @@ The halt command allows the referee to interrupt the game immediately whenever a
 also used to recalibrate the vision software during a game if the vision expert considers it necessary and the referee agrees and for <a href="#_ロボットの交代robot_substitution">robot substitution</a>. Additionally, the referee is free to issue the halt command at will.</p>
 </div>
 <div class="paragraph">
-<p>「ハルト」コマンドの後は常に「ストップ」コマンドが送信される。<br>
-The halt command is always followed up by stop.</p>
+<p>「ハルト」コマンドの後は常に「ストップ」コマンドが送信される。試合が続行される前に、各チームに十分な準備時間が与えられる。<a href="#_game_controller">Game Controller</a>は「ハルト」コマンドから最大で10秒間だけ待機するが、ロボットの準備ができていれば試合は続行できる。<br>
+The halt command is always followed up by stop.
+Enough preparation time should be given to teams, before the game is continued.
+The <a href="#_game_controller">game controller</a> will wait for up to 10 seconds after a halt command, but the game can be continued if robots are prepared already.</p>
 </div>
 </div>
 </div>
@@ -4117,7 +4119,7 @@ Division A has shorter timeouts in some situations</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-最終更新 2022-11-22 23:14:41 +0900
+最終更新 2022-11-26 15:20:17 +0900
 </div>
 </div>
 </body>
