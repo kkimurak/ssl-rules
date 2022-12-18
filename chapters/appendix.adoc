@@ -410,5 +410,3 @@ The automatic <<ボール配置/Ball Placement, ball placement>> procedure is ma
 The <<aimless-kick, aimless kick>> rule only applies to division B.
 * ディヴィジョンAはいくつかの状況における時間切れまでの時間が短い。 +
 Division A has shorter timeouts in some situations
-* <<非常停止/Emergency stop, 非常停止>>はディヴィジョンAにのみ適用される。 +
-<<非常停止/Emergency stop, Emergency stop>> only applies to division A.
