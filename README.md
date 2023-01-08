@@ -35,7 +35,7 @@ If you have Docker installed, you can use the AsciiDoctor image that optimized f
 # Pull image once
 docker pull htakeuchi/docker-asciidoctor-jp
 # Build the HTML5 version
-docker run -v $PWD:/documents/ htakeuchi/docker-asciidoctor-jp asciidoctor -a allow-uri-read sslrules.adoc
+docker run -v $PWD:/documents/ htakeuchi/docker-asciidoctor-jp asciidoctor -r asciidoctor-diagram -a allow-uri-read sslrules.adoc
 # Build the PDF version
-docker run -v $PWD:/documents/ htakeuchi/docker-asciidoctor-jp asciidoctor-pdf -r asciidoctor-pdf-cjk-kai_gen_gothic -a pdf-style=KaiGenGothicJP -a allow-uri-read sslrules.adoc
+docker run -v $PWD:/documents/ htakeuchi/docker-asciidoctor-jp asciidoctor-pdf -r asciidoctor-diagram -r asciidoctor-pdf-cjk-kai_gen_gothic -a pdf-style=KaiGenGothicJP -a allow-uri-read sslrules.adoc
 ```
