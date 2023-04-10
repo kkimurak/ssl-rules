@@ -27,13 +27,16 @@ Remaining in contact with the ball for more than 0.05 meters also counts as doub
 非スポーツマン行為は<<イエローカード/Yellow Card, イエローカード>>、<<レッドカード/Red Card, レッドカード>>、<<ペナルティーキック/Penalty Kick, ペナルティーキック>>、<<強制的な試合放棄/Forced Forfeit, 強制的な試合放棄>>、<<失格/Disqualification, 失格>>につながる可能性がある。人間の<<主審/Referee, 主審>>は反則の重大さに応じて適切な処罰を選択する。 +
 Unsporting behavior can lead to <<イエローカード/Yellow Card, yellow cards>>, <<レッドカード/Red Card, red cards>>, <<ペナルティーキック/Penalty Kick, penalty kicks>>, a <<強制的な試合放棄/Forced Forfeit, forced forfeit>> or a <<失格/Disqualification, disqualification>>. The human <<主審/Referee, referee>> chooses an appropriate sanction, depending on the severity of the offense.
 
-For minor infringements, a <<Yellow Card>> is adequate,
-while on more severe infringements, that gave the team an advantage, a <<Red Card>> or <<Penalty Kick>> can be issued.
+軽微なものであれば<<イエローカード/Yellow Card, イエローカード>>の適用で十分であるが、
+それにより当該チームが優位になるようなものであれば、<<レッドカード/Red Card, レッドカード>>や<<ペナルティーキック/Penalty Kick, ペナルティーキック>>が与えられる。 +
+For minor infringements, a <<イエローカード/Yellow Card, イエローカード>> is adequate,
+while on more severe infringements, that gave the team an advantage, a <<レッドカード/Red Card, Red Card>> or <<ペナルティーキック/Penalty Kick, Penalty Kick>> can be issued.
 
-For harder sanctions, the referee is advised to refer to members of the <<Technical Committee, technical committee>> or the <<Organizing Committee, organizing committee>>.
+より厳しい制裁を与える場合は、主審は<<技術委員会/Technical Committee, 技術委員会>>や<<組織委員会/Organizing Committee, 組織委員会>>に相談することを推奨する。
+For harder sanctions, the referee is advised to refer to members of the <<技術委員会/Technical Committee, technical committee>> or the <<組織委員会/Organizing Committee, organizing committee>>.
 
-NOTE: 審判は、どの処罰を選択すべきか判断できない場合は、<<技術委員会/Technical Committee, 技術委員会>>または<<組織委員会/Organizing Committee, 組織委員会>>のメンバーと協議することができる。 +
-If the referee is not sure which sanction to choose, he may confer with the <<Assistant Referee, assistant referee>> and members of the <<技術委員会/Technical Committee, technical committee>> or the <<組織委員会/Organizing Committee, organizing committee>>.
+NOTE: 審判は、どの処罰を選択すべきか判断できない場合は、<<副審/Assistant Referee, 副審>>や<<技術委員会/Technical Committee, 技術委員会>>または<<組織委員会/Organizing Committee, 組織委員会>>のメンバーと協議することができる。 +
+If the referee is not sure which sanction to choose, he may confer with the <<副審/Assistant Referee, assistant referee>> and members of the <<技術委員会/Technical Committee, technical committee>> or the <<組織委員会/Organizing Committee, organizing committee>>.
 
 非スポーツマン行為のいくつかの例は以下の通りである。 +
 Some examples of unsporting behavior are listed below.
@@ -46,12 +49,16 @@ It is not allowed to damage or modify robots of other teams.
 フィールドやボールを損傷させたり変形させてはならない。 +
 It is not allowed to damage or modify the field or the ball.
 
-==== Disrespect Procedures
+==== 手順の軽視/Disrespect Procedures
+次に示すような行為を繰り返してはならない。 +
 Not following defined procedures repetitively, like for example:
 
-* <<Robot Handler, Robot handler>> puts a robot on the field, while it is not allowed
-* Robots do not keep required distance to the ball during stop
-* Robots do not conform to the positioning rules during a <<Penalty Kick, penalty kick>> and need to be moved or removed manually
+* 許可されていないにもかかわらず<<ハンドラー/Robot Handler, ハンドラー>>がロボットをフィールド内に投入する +
+<<ハンドラー/Robot Handler, Robot handler>> puts a robot on the field, while it is not allowed
+* ロボットが「ストップ」中にボールまでの距離要件を満たさない +
+Robots do not keep required distance to the ball during stop
+* ロボットが<<ペナルティーキック/Penalty Kick, ペナルティーキック>>中にルールで指定された位置要件を満たさず、手動で移動もしくは除去される必要がある +
+Robots do not conform to the positioning rules during a <<ペナルティーキック/Penalty Kick, penalty kick>> and need to be moved or removed manually
 
 ==== 敬意の欠如/Showing Lack Of Respect
 チームメンバーは試合に関わる全員に対して適切な敬意を示している必要がある。このルールの侵害には以下が含まれるがこれらに限定されない。 +

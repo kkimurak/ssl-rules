@@ -25,9 +25,12 @@ The referee is assisted by the <<オートレフ/Automatic Referee, automatic re
 The decisions of the referee regarding facts connected with play are final. The referee may only change a decision on realizing that it is incorrect or, at his discretion, on the
 advice of an assistant referee, provided that he has not restarted play.
 
+ルールはすべての状況に対してその結果を詳細に定義するものではない。
+したがって主審は、ルールが明確でないときは適切な方法で判断を下すことが推奨される。
+よくある手順として、「<<非スポーツマン行為/Unsporting Behavior, 非スポーツマン行為>>」があった場合はまずは警告を発し、繰り返された場合は罰則を適用する、というものがある。 +
 The rules do not define all circumstance and their consequences in every detail.
 The referee is thus advised to judge in an adequate way, if the rules are not explicit.
-The usual procedure is to issue a warning on the first occurrence and an <<Unsporting Behavior>> on repetition.
+The usual procedure is to issue a warning on the first occurrence and an <<非スポーツマン行為/Unsporting Behavior, Unsporting Behavior>> on repetition.
 
 主審は、役員または観客のあらゆる怪我、あらゆる種類の財産への損害、個人、クラブ、会社、協会、またはその他の団体に対するその他の損失に対し、法的な責任を負わない。 +
 The referee is not held liable for any kind of injury suffered by an official or spectator, any damage to property of any kind nor any other loss suffered by an individual, club, company, association, or other body.
