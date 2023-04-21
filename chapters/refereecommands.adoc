@@ -1,6 +1,7 @@
 == レフェリーコマンド/Referee Commands
 
-An overview of the referee commands and how they interact with the game state, is given in <<Game States>>.
+レフェリーコマンドの概要と、それらが試合の状態とどのように相互作用するかについては「<<試合の状態/Game States, 試合の状態>>」に記載される。 +
+An overview of the referee commands and how they interact with the game state, is given in <<試合の状態/Game States, Game States>>.
 
 === 試合の停止/Stopping The Game
 ==== 停止/Stop

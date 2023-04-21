@@ -5,7 +5,7 @@
 Shooting and <<ドリブルデバイス/Dribbling Device, dribbling>> is considered as manipulating the ball, the ball accidentally bouncing off the hull is not.
 
 [appendix]
-== Game States
+== 試合の状態/Game States
 
 [plantuml, target=game-states, format=svg]
 ....
