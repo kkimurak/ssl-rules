@@ -140,7 +140,7 @@ timer for bringing the ball into play is reset
 during <<ボール配置/Ball Placement, Ball Placement>>
 | 配置制限時間のタイマーを10秒延長 +
 placement timer increased by 10 seconds
-| no | auto referee
+| yes | auto referee
 || <<ボール配置/Ball Placement, PLACEMENT_SUCCEEDED>>
 | <<ボール配置/Ball Placement, ボール配置>>中 +
 during <<ボール配置/Ball Placement, Ball Placement>>
