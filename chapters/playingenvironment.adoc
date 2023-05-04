@@ -142,9 +142,9 @@ At least one automatic referee is required per game. If more than one automatic 
 オープンソースであることを前提として、新たなオートレフの実装を提供することができる。新しい実装は少なくとも競技会の3か月前までにアナウンスされなければならない。<<技術委員会/Technical Committee, 技術委員会>>はその実装を使用するかしないかを決定する。 +
 New automatic referee implementations can be provided, given that the source code is open-sourced. New implementations must be announced at least three months before the competition. The <<技術委員会/Technical Committee, technical committee>> decides if an implementation will be used or not.
 
-<<ゲームイベント表/Game Event Table, ゲームイベント表>>はオートレフの実装がどのゲームイベントを検出できなけらばならないかを示す。
+<<ゲームイベント/Game Events, ゲームイベント表>>はオートレフの実装がどのゲームイベントを検出できなけらばならないかを示す。
 <<技術委員会/Technical Committee, 技術委員会>>および両チームが同意すれば、個別のゲームイベントをオートレフでの処理上で、もしくは完全に無効化することができる。 +
-The <<ゲームイベント表/Game Event Table, Game Event Table>> shows which game events an automatic referee implementation must be able to detect.
+The <<ゲームイベント/Game Events, Game Event Table>> shows which game events an automatic referee implementation must be able to detect.
 Individual game events can be disabled completely or in some automatic referee implementations if both teams and the <<技術委員会/Technical Committee, technical committee>> agree.
 
 存在する実装はGithubで確認することができる。: https://github.com/RoboCup-SSL/ssl-autorefs +

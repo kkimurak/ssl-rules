@@ -74,361 +74,108 @@ Penalty --> Stop: after 10 seconds
 @enduml
 ....
 
-[appendix]
-== ゲームイベント表/Game Event Table
-ゲームイベント表は、各ゲームイベントとその結果をまとめたものである。また、<<オートレフ/Automatic Referee, オートレフ>>の実装が処理できなければならないものを表記する。 +
-The game event table is a compilation of the different game events and their consequences. It also lists what all <<オートレフ/Automatic Referee, Automatic Referee>> implementations must be capable of handling.
+== ゲームイベント/Game Events
+次に示すゲームイベント表は、各ゲームイベントとその結果をまとめたものである。また、<<オートレフ/Automatic Referee, オートレフ>>の実装が処理できなければならないものを表記する。 +
+The following game event table is a compilation of the different game events and their consequences. It also lists what all <<オートレフ/Automatic Referee, Automatic Referee>> implementations must be capable of handling.
 
-NOTE: この表にまとめられた情報は不完全なものである。すべての定義を確認するには、対応した各章を読むこと。 +
-Note that the information shown in this table here is incomplete. Please read the sections of the respective events for the full definitions.
+NOTE: この表にまとめられた情報は不完全なものである可能性がある。すべての定義を確認するには、対応した各章を読むこと。 +
+The information shown in this table here may be incomplete. Please read the sections of the respective events for the full definitions.
 
-=== フィールド外にボールが出た際のイベント/Events For Ball Leaving The Field
+[cols="0,1,1,1,1,1"]
 |===
-| イベント /Event | 適用範囲 /Applicability | 実行されるコマンド /Command | 処理担当 /Handled by
+|| イベント/Event | 適用範囲/Applicability | 結果/Consequence | ファウル回数カウンターへの計上/Increments Foul Counter | 始点/Initiated By
 
-| <<タッチラインとの交差/Touch Line Crossing, タッチラインとの交差>> +
-<<タッチラインとの交差/Touch Line Crossing, Touch Line Crossing>>
-| <<インプレイとアウトオブプレイ/Ball In And Out Of Play, インプレイ中>> +
-<<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>>
-| <<停止/Stop, ストップ>> -> <<フリーキック/Free Kick, フリーキック>> +
-<<停止/Stop, Stop>> -> <<フリーキック/Free Kick, Free Kick>>
-| オートレフ +
-auto referee
+6+| *インプレイ中/While Match is Running*
+|| <<試合の停滞/No Progress In Game, NO_PROGRESS_IN_GAME>> | <<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>> | <<停止/Stop>> -> <<フォーススタート/Force Start>> | no | game controller
+|| <<ダブルタッチ/Double Touch, ATTACKER_DOUBLE_TOUCHED_BALL>> | <<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>> | <<停止/Stop>> -> <<フリーキック/Free Kick>> | no | auto referee
 
-| <<ゴールラインとの交差/Goal Line Crossing, ゴールラインとの交差>> +
-<<ゴールラインとの交差/Goal Line Crossing, Goal Line Crossing>>
-| <<インプレイとアウトオブプレイ/Ball In And Out Of Play, インプレイ中>> +
-<<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>>
-| <<停止/Stop, ストップ>> -> <<フリーキック/Free Kick, フリーキック>> +
-<<停止/Stop, Stop>> -> <<フリーキック/Free Kick, Free Kick>>
-| オートレフ +
-auto referee
+| 5+| *ボールがフィールド外に出た時/Ball Leaving the Field*
+|| <<得点/Scoring Goals, POSSIBLE_GOAL>> | <<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>> | <<ハルト/Halt>> | no | auto referee
+|| <<タッチラインとの交差/Touch Line Crossing, BALL_LEFT_FIELD_TOUCH_LINE>> | <<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>> | <<停止/Stop>> -> <<フリーキック/Free Kick>> | no | auto referee
+|| <<ゴールラインとの交差/Goal Line Crossing, BALL_LEFT_FIELD_GOAL_LINE>> | <<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>> | <<停止/Stop>> -> <<フリーキック/Free Kick>> | no | auto referee
+|| <<aimless-kick, AIMLESS_KICK>> | <<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>> | <<停止/Stop>> -> <<フリーキック/Free Kick>> | no | auto referee
 
-| <<aimless-kick, エイムレスキック>> +
-<<aimless-kick, Aimless Kick>>
-| <<インプレイとアウトオブプレイ/Ball In And Out Of Play, インプレイ>> +
-<<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>>
-| <<停止/Stop, ストップ>> -> <<フリーキック/Free Kick, フリーキック>> +
-<<停止/Stop, Stop>> -> <<フリーキック/Free Kick, Free Kick>>
-| オートレフ +
-auto referee
-|===
+| 5+| *ファウル/Fouls*
+|| <<マルチプルディフェンス/Multiple Defenders, DEFENDER_IN_DEFENSE_AREA>> | <<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>> | <<停止/Stop>> -> <<ペナルティーキック/Penalty Kick>> | no | auto referee
+|| <<キーパーによるボール保持/Keeper Held Ball, KEEPER_HELD_BALL>> | <<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>> | <<停止/Stop>> -> <<フリーキック/Free Kick>> | yes | game controller
+|| <<境界線との交差/Boundary Crossing, BOUNDARY_CROSSING>> | <<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>> | <<停止/Stop>> -> <<フリーキック/Free Kick>> | yes | auto referee
+|| <<ドリブルの超過/Excessive Dribbling, BOT_DRIBBLED_BALL_TOO_FAR>> | <<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>> | <<停止/Stop>> -> <<フリーキック/Free Kick>> | yes | auto referee
+|| <<相手ディフェンスエリア内でのアタッカーのボールへの接触/Attacker Touched Ball In Opponent Defense Area, ATTACKER_TOUCHED_BALL_IN_DEFENSE_AREA>> | <<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>> | - | yes | auto referee
+|| <<ボール速度/Ball Speed, BOT_KICKED_BALL_TOO_FAST>> | <<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>> | - | yes | auto referee
 
+| 5+| *ペナルティーキック/Penalty Kick*
+|| <<ペナルティーキック/Penalty Kick, PENALTY_KICK_FAILED>>
+| <<ペナルティーキック/Penalty Kick, ペナルティーキック>>中 +
+during <<ペナルティーキック/Penalty Kick, Penalty Kick>>
+| <<停止/Stop>> -> <<フリーキック/Free Kick>> | no | auto referee, game controller
 
-=== 試合の停止を伴うファウルに関するイベント/Events For Stopping Fouls
-全ての<<試合の停止を伴うファウル/Stopping Fouls, 試合の停止を伴うファウル>>は次の結果をもたらす: +
-All <<試合の停止を伴うファウル/Stopping Fouls, Stopping Fouls>> result in:
+6+| *常時/always*
+|| <<衝突/Crashing, BOT_CRASH_UNIQUE>> | 常時/always | - | yes | auto referee
+|| <<衝突/Crashing, BOT_CRASH_DRAWN>> | 常時/always | - | yes | auto referee
 
-* ファウルのカウンターをひとつ増加させる(<<マルチプルディフェンス/Multiple Defenders, マルチプルディフェンス>>を除く)。 +
-Incrementing the foul counter (except for <<マルチプルディフェンス/Multiple Defenders, Multiple Defenders>>).
+6+| *フリーキックおよびストップゲーム中/During Free Kick and While Match is Stop*
+|| <<ロボットの相手ディフェンスエリアへの極端な接近/Robot Too Close To Opponent Defense Area, ATTACKER_TOO_CLOSE_TO_DEFENSE_AREA>>
+| <<停止/Stop, ストップ>>中および<<フリーキック/Free Kick, フリーキック>>中 + 
+during <<停止/Stop, Stop>> and <<フリーキック/Free Kick, Free Kick>> 
+| <<停止/Stop>> -> <<フリーキック/Free Kick>> | yes | auto referee
 
-|===
-| イベント /Event | 適用範囲 /Applicability | アクション /Action | 処理担当 /Handled by
+6+| *ストップゲーム中/While Match is Stopped*
 
-| <<ロボットの相手ディフェンスエリアへの極端な接近/Robot Too Close To Opponent Defense Area, ロボットの相手ディフェンスエリアへの極端な接近>> +
-<<ロボットの相手ディフェンスエリアへの極端な接近/Robot Too Close To Opponent Defense Area, Robot Too Close To Opponent Defense Area>>
-| <<停止/Stop, ストップ中>>、ならびに<<フリーキック/Free Kick, フリーキック中>> +
-during <<停止/Stop, Stop>> and <<フリーキック/Free Kick, Free Kick>>
-| <<停止/Stop, ストップ>> -> <<フリーキック/Free Kick, フリーキック>> +
-<<停止/Stop, Stop>> -> <<フリーキック/Free Kick, Free Kick>>
-| オートレフ +
-auto referee
-
-| <<マルチプルディフェンス/Multiple Defenders, マルチプルディフェンス>> +
-<<マルチプルディフェンス/Multiple Defenders, Multiple Defenders>> +
-| <<インプレイとアウトオブプレイ/Ball In And Out Of Play, インプレイ>> +
-<<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>>
-| <<停止/Stop, ストップ>> -> <<ペナルティーキック/Penalty Kick, ペナルティーキック>> +
-<<停止/Stop, Stop>> -> <<ペナルティーキック/Penalty Kick, Penalty Kick>>
-| オートレフ +
-auto referee
-
-| <<境界線との交差/Boundary Crossing, 境界線との交差>> +
-<<境界線との交差/Boundary Crossing, Boundary Crossing>>
-| <<インプレイとアウトオブプレイ/Ball In And Out Of Play, インプレイ>> +
-<<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>>
-| <<停止/Stop, ストップ>> -> <<フリーキック/Free Kick, フリーキック>> +
-<<停止/Stop, Stop>> -> <<フリーキック/Free Kick, Free Kick>>
-| オートレフ +
-auto referee
-
-| <<ディフェンスエリア/Defense Area, ディフェンスエリア>>内での<<キーパーによるボール保持/Keeper Held Ball, キーパーによるボール保持>> +
-<<キーパーによるボール保持/Keeper Held Ball, Keeper Held Ball>> in <<ディフェンスエリア/Defense Area, defense area>>
-| <<インプレイとアウトオブプレイ/Ball In And Out Of Play, インプレイ>> +
-<<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>>
-| <<停止/Stop, ストップ>> -> <<フリーキック/Free Kick, フリーキック>> +
-<<停止/Stop, Stop>> -> <<フリーキック/Free Kick, Free Kick>>
-| game controller
-
-| <<ドリブルの超過/Excessive Dribbling, オーバードリブル>> +
-<<ドリブルの超過/Excessive Dribbling, Excessive Dribbling>>
-| <<インプレイとアウトオブプレイ/Ball In And Out Of Play, インプレイ>> +
-<<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>>
-| <<停止/Stop, ストップ>> -> <<フリーキック/Free Kick, フリーキック>> +
-<<停止/Stop, Stop>> -> <<フリーキック/Free Kick, Free Kick>>
-| オートレフ +
-auto referee
-
-| <<プッシング/Pushing, プッシング>> +
-<<プッシング/Pushing, Pushing>>
-| 常時 +
-always
-| <<停止/Stop, ストップ>> -> <<フリーキック/Free Kick, フリーキック>> +
-<<停止/Stop, Stop>> -> <<フリーキック/Free Kick, Free Kick>>
-| 主審 -> game controller +
-referee -> game controller
-
-| <<ボールの保持/Ball Holding, ボールの保持>> +
-<<ボールの保持/Ball Holding, Ball Holding>>
-| <<インプレイとアウトオブプレイ/Ball In And Out Of Play, インプレイ>> +
-<<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>>
-| <<停止/Stop, ストップ>> -> <<フリーキック/Free Kick, フリーキック>> +
-<<停止/Stop, Stop>> -> <<フリーキック/Free Kick, Free Kick>>
-| 主審 -> game controller +
-referee -> game controller
-
-| <<転倒や部品の脱落/Tipping Over Or Dropping Parts, 転倒や部品の脱落>> +
-<<転倒や部品の脱落/Tipping Over Or Dropping Parts, Tipping Over Or Dropping Parts>>
-| 常時 +
-always
-| <<停止/Stop, ストップ>> -> <<フリーキック/Free Kick, フリーキック>> +
-<<停止/Stop, Stop>> -> <<フリーキック/Free Kick, Free Kick>>
-| 主審 -> game controller +
-referee -> game controller
-|===
-
-
-=== 試合の停止を伴わないファウルに関するイベント/Events For Non Stopping Fouls
-全ての<<試合の停止を伴わないファウル/Non Stopping Fouls, 試合の停止を伴わないファウル>>は以下の結果をもたらす: +
-All <<試合の停止を伴わないファウル/Non Stopping Fouls, Non Stopping Fouls>> result in:
-
-* ファウルのカウンターをひとつ増加させる。 +
-Incrementing the foul counter.
-* 中断することなく続いている場合、2秒ごとに繰り返される。 +
-Repeated every 2 seconds, if still committed without interruption.
-
-|===
-| イベント /Event | 適用範囲 /Applicability | アクション /Action | 処理担当 /Handled by
-
-| <<相手ディフェンスエリア内でのアタッカーのボールへの接触/Attacker Touched Ball In Opponent Defense Area, 相手ディフェンスエリア内でのボールへの接触>> +
-<<相手ディフェンスエリア内でのアタッカーのボールへの接触/Attacker Touched Ball In Opponent Defense Area, Attacker Touched Ball In Opponent Defense Area>>
-| <<インプレイとアウトオブプレイ/Ball In And Out Of Play, インプレイ中>> +
-<<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>>
-| - | オートレフ +
-auto referee
-
-| <<ボール速度/Ball Speed, ボール速度>> +
-<<ボール速度/Ball Speed, Ball Speed>>
-| <<インプレイとアウトオブプレイ/Ball In And Out Of Play, インプレイ中>> +
-<<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>>
-| - | オートレフ +
-auto referee
-
-| <<衝突/Crashing, 衝突>> +
-<<衝突/Crashing,Crashing>>
-| 常時 +
-always
-| - | オートレフ +
-auto referee
-
-| 双方による<<衝突/Crashing, 衝突>> +
-<<衝突/Crashing, Crashing>> draw
-| 常時 +
-always
-| - | オートレフ +
-auto referee
-|===
-
-
-=== アウトオブプレイ中のファウルに関するイベント/Events For Fouls While Ball Out Of Play
-全ての<<アウトオブプレイ中のファウル/Fouls While Ball Out Of Play, アウトオブプレイ中のファウル>>は以下の結果をもたらす: +
-All <<アウトオブプレイ中のファウル/Fouls While Ball Out Of Play,Fouls While Ball Out Of Play>> result in:
-
-* ファウルのカウンターをひとつ増加させる。 +
-Incrementing the foul counter.
-* 中断することなく続いている場合、2秒ごとに繰り返される。 +
-Repeated every 2 seconds, if still committed.
-* 各ファウル、チームに対し2秒間に一度のみ適用する。 +
-Only once per foul, team and 2 seconds. +
-
-|===
-| イベント /Event | 適用範囲 /Applicability | アクション /Action | 処理担当 /Handled by
-
-| <<ディフェンダーのボールへの極端な接近/Defender Too Close To Ball, ディフェンダーのボールへの極端な接近>> +
-<<ディフェンダーのボールへの極端な接近/Defender Too Close To Ball, Defender Too Close To Ball>>
-| <<インプレイとアウトオブプレイ/Ball In And Out Of Play, アウトオブプレイ中>> +
-<<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball out of play>>
-| インプレイにするまでのタイマーをリセット +
-timer for bringing the ball into play is reset
-| オートレフ +
-auto referee
-
-| <<ストップ中のロボットの速度/Robot Stop Speed, ストップ中のロボットの速度>> +
-<<ストップ中のロボットの速度/Robot Stop Speed, Robot Stop Speed>>
-| <<停止/Stop, ストップゲーム>>中 +
+| 5+| *ファウル/Fouls*
+|| <<ストップ中のロボットの速度/Robot Stop Speed, BOT_TOO_FAST_IN_STOP>> 
+| <<停止/Stop, ストップ>>中 +
 during <<停止/Stop, Stop>>
-| -
-| オートレフ +
-auto referee
+| - | yes | auto referee
 
-| <<ボール配置への干渉/Ball Placement Interference, ボール配置への干渉>> +
-<<ボール配置への干渉/Ball Placement Interference, Ball Placement Interference>>
+|| <<ディフェンダーのボールへの極端な接近/Defender Too Close To Ball, DEFENDER_TOO_CLOSE_TO_KICK_POINT>> 
+| <<インプレイとアウトオブプレイ/Ball In And Out Of Play, アウトオブプレイ中>> +
+<<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball out of play>> 
+| インプレイにするまでの時間制限のタイマーをリセット +
+timer for bringing the ball into play is reset
+| yes | auto referee
+
+| 5+| *ボール配置/Ball Placement*
+|| <<ボール配置への干渉/Ball Placement Interference, BOT_INTERFERED_PLACEMENT>> 
 | <<ボール配置/Ball Placement, ボール配置>>中 +
 during <<ボール配置/Ball Placement, Ball Placement>>
-| 配置可能時間の延長(10秒) +
+| 配置制限時間のタイマーを10秒延長 +
 placement timer increased by 10 seconds
-| オートレフ +
-auto referee
-|===
-
-
-=== ゴールに関するイベント/Events For Scoring Goals
-|===
-| イベント /Event | 適用範囲 /Applicability | 実行されるコマンド /Command | 処理担当 /Handled by
-
-| <<得点/Scoring Goals, 審議を要するゴール>> 
-<<得点/Scoring Goals, Possible Goal>> 
-| <<インプレイとアウトオブプレイ/Ball In And Out Of Play, インプレイ中>> + 
-<<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>> 
-| <<ハルト/Halt, ハルト>> +
-<<ハルト/Halt, Halt>>
-| オートレフ +
-auto referee
-
-| <<得点/Scoring Goals, ゴール>> +
-<<得点/Scoring Goals, Goal>>
-| <<インプレイとアウトオブプレイ/Ball In And Out Of Play, インプレイ>> +
-<<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>>
-| <<停止/Stop, ストップ>> -> <<キックオフ/Kick-Off, キックオフ>> +
-<<停止/Stop, Stop>> -> <<キックオフ/Kick-Off, Kick-Off>>
-| 主審 -> game controller +
-referee -> game controller
-
-| <<得点/Scoring Goals, 無効なゴール>> +
-<<得点/Scoring Goals, Invalid Goal>> 
-| <<インプレイとアウトオブプレイ/Ball In And Out Of Play, インプレイ>> +
-<<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>>
-| <<停止/Stop, ストップ>> -> <<フリーキック/Free Kick, フリーキック>> +
-<<停止/Stop, Stop>> -> <<フリーキック/Free Kick, Free Kick>>
-| game controller
-|===
-
-
-=== その他のイベント/Other events
-
-|===
-| イベント /Event | 適用範囲 /Applicability | 実行されるコマンド /Command | 処理担当 /Handled by
-
-| <<ダブルタッチ/Double Touch, ダブルタッチ>> +
-<<ダブルタッチ/Double Touch, Double Touch>>
-| <<インプレイとアウトオブプレイ/Ball In And Out Of Play, インプレイ>> +
-<<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>>
-| <<停止/Stop, ストップ>> -> <<フリーキック/Free Kick, フリーキック>> +
-<<停止/Stop, Stop>> -> <<フリーキック/Free Kick, Free Kick>>
-| オートレフ +
-auto referee
-
-| <<ボール配置/Ball Placement, ボール配置>>成功 +
-<<ボール配置/Ball Placement, Ball Placement>> successful
+| no | auto referee
+|| <<ボール配置/Ball Placement, PLACEMENT_SUCCEEDED>>
 | <<ボール配置/Ball Placement, ボール配置>>中 +
 during <<ボール配置/Ball Placement, Ball Placement>>
 | 続行 +
-continue
-| オートレフ +
-auto referee
-
-| <<ペナルティーキック/Penalty Kick, ペナルティーキック>> 失敗 +
-<<ペナルティーキック/Penalty Kick, Penalty Kick>> failed 
-| during <<ペナルティーキック/Penalty Kick, ペナルティーキック>> +
-during <<ペナルティーキック/Penalty Kick, Penalty Kick>>
-| <<停止/Stop, ストップ>> -> <<フリーキック/Free Kick, フリーキック>> +
-<<停止/Stop, Stop>> -> <<フリーキック/Free Kick, Free Kick>> 
-| オートレフ、game controller +
-auto referee, game controller
-
-| <<試合の停滞/No Progress In Game, 試合の停滞>> +
-<<試合の停滞/No Progress In Game, No Progress In Game>>
-| <<インプレイとアウトオブプレイ/Ball In And Out Of Play, インプレイ>> +
-<<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>>
-| <<停止/Stop, ストップ>> -> <<フォーススタート/Force Start, フォーススタート>> +
-<<停止/Stop, Stop>> -> <<フォーススタート/Force Start, Force Start>>
-| game controller
-
-| 味方チームの<<ボール配置/Ball Placement, ボール配置>>失敗 +
-<<ボール配置/Ball Placement, Ball Placement>> failed by team in favor
+continue 
+| no | auto referee
+|| <<ボール配置/Ball Placement, PLACEMENT_FAILED>> by team in favor 
 | <<ボール配置/Ball Placement, ボール配置>>中 +
 during <<ボール配置/Ball Placement, Ball Placement>>
-| <<停止/Stop, ストップ>> -> <<フリーキック/Free Kick, フリーキック>> (ディヴィジョンA) / 前のコマンド (ディヴィジョンB) +
-<<停止/Stop, Stop>> -> <<フリーキック/Free Kick, Free Kick>> (div A) / previous command (div B)
-| game controller
-
-| 相手チームの<<ボール配置/Ball Placement, ボール配置>>失敗 +
-<<ボール配置/Ball Placement, Ball Placement>> failed by opponent
+| <<停止/Stop>> -> <<フリーキック/Free Kick>> (div A) / previous command (div B) | no | game controller
+|| <<ボール配置/Ball Placement, PLACEMENT_FAILED>> by opponent 
 | <<ボール配置/Ball Placement, ボール配置>>中 +
 during <<ボール配置/Ball Placement, Ball Placement>>
-| <<停止/Stop, ストップ>> +
-<<停止/Stop, Stop>>
-| game controller
+| <<停止/Stop>> | no | game controller
 
-| 複数回の<<ファウル/Fouls, ファウル>> +
-Multiple <<ファウル/Fouls, Fouls>>
-| 常時 +
-always
-| <<イエローカード/Yellow Card, イエローカード>> +
-<<イエローカード/Yellow Card, Yellow Card>>
-| game controller
-
-| 複数枚の<<イエローカード/Yellow Card, イエローカード>> +
-Multiple <<イエローカード/Yellow Card, Yellow Cards>>
-| 常時 +
-always
-| <<レッドカード/Red Card, レッドカード>> +
-<<レッドカード/Red Card, Red Card>>
-| game controller
-
-| 手動での<<ロボットの交代/Robot Substitution, ロボット交代>> +
-Perform manual <<ロボットの交代/Robot Substitution, Robot Substitution>>
-| <<停止/Stop, ストップ>>中 +
+6+| *Informational*
+|| <<ファウル/Fouls, MULTIPLE_FOULS>> | - | <<イエローカード/Yellow Card>> | no | game controller
+|| <<イエローカード/Yellow Card, MULTIPLE_CARDS>> | - | <<レッドカード/Red Card>> | no | game controller
+|| <<ロボットの台数/Number Of Robots, TOO_MANY_ROBOTS>> | - | <<停止/Stop>> | no | game controller
+|| <<得点/Scoring Goals, INVALID_GOAL>> | - | <<停止/Stop>> -> <<フリーキック/Free Kick>> | no | game controller
+|| <<ロボットの交代/Robot Substitution, BOT_SUBSTITUTION>> 
+| <<停止/Stop, 停止>>中 +
 during <<停止/Stop, Stop>>
-| 次のストップで<<ハルト/Halt, ハルト>>、次いで<<停止/Stop, ストップ>> +
-<<ハルト/Halt, Halt>> (after next stoppage), then <<停止/Stop, Stop>>
-| game controller
+| (次の停止時に)<<ハルト/Halt, ハルト>>、次いで<<停止/Stop, 停止>> +
+<<ハルト/Halt, Halt>> (after next stoppage), then <<停止/Stop, Stop>> | no | remote control
+|| <<チャレンジフラッグ/Challenge Flags, CHALLENGE_FLAG>> | 常時/always | - | no | remote control
+|| <<非常停止/Emergency stop, EMERGENCY_STOP>> | 常時/always | <<ハルト/Halt>> -> <<タイムアウト/Timeouts, Timeout>> + <<イエローカード/Yellow Card>>>> | no | remote control
 
-| <<ロボットの台数/Number Of Robots, ロボットの台数>>制限超過 +
-<<ロボットの台数/Number Of Robots, Number Of Robots>> exceeded
-| 常時 +
-always
-| <<停止/Stop, ストップ>> +
-<<停止/Stop, Stop>>
-| オートレフ +
-auto referee
-
-| <<チャレンジフラッグ/Challenge Flags, チャレンジフラッグ>>の使用 +
-Raise <<チャレンジフラッグ/Challenge Flags, Challenge flag>>
-| 常時 +
-always
-| <<停止/Stop, ストップ>> +
-<<停止/Stop, Stop>>
-| リモートコントロール -> game controller +
-remote control -> game controller
-
-| <<非常停止/Emergency stop, 非常停止>> +
-Perform <<非常停止/Emergency stop, Emergency stop>>
-| 常時 +
-always
-| <<ハルト/Halt, ハルト>> +
-<<ハルト/Halt, Halt>>
-| リモートコントロール -> game controller +
-remote control -> game controller
-
-| <<非スポーツマン行為/Unsporting Behavior, 非スポーツマン行為>> +
-<<非スポーツマン行為/Unsporting Behavior, Unsporting Behavior>>
-| 常時 +
-always
-| <<停止/Stop, ストップ>> -> <<イエローカード/Yellow Card, イエローカード>>、<<レッドカード/Red Card, レッドカード>>、<<ペナルティーキック/Penalty Kick, ペナルティーキック>>、<<強制的な試合放棄/Forced Forfeit, 強制的な試合放棄>>、<<失格/Disqualification, 失格>>のいずれか +
-<<停止/Stop, Stop>> -> <<イエローカード/Yellow Card, Yellow Card>>, <<レッドカード/Red Card, Red Card>>, <<ペナルティーキック/Penalty Kick, Penalty Kick>>, <<強制的な試合放棄/Forced Forfeit, Forced Forfeit>> or <<失格/Disqualification, Disqualification>>
-| 主審 -> game controller +
-referee -> game controller
+6+| *手動/Manual*
+|| <<得点/Scoring Goals, GOAL>> | - | <<停止/Stop>> -> <<キックオフ/Kick-Off>> | no | human referee
+|| <<プッシング/Pushing, BOT_PUSHED_BOT>> | 常時/always | <<停止/Stop>> -> <<フリーキック/Free Kick>> | yes | human referee
+|| <<ボールの保持/Ball Holding, BOT_HELD_BALL_DELIBERATELY>> | <<インプレイとアウトオブプレイ/Ball In And Out Of Play, ball in play>> | <<停止/Stop>> -> <<フリーキック/Free Kick>> | yes | human referee
+|| <<転倒や部品の脱落/Tipping Over Or Dropping Parts, BOT_TIPPED_OVER>> | 常時/always | <<停止/Stop>> -> <<フリーキック/Free Kick>> | yes | human referee
+|| <<非スポーツマン行為/Unsporting Behavior, UNSPORTING_BEHAVIOR_MINOR>> | 常時/always | <<停止/Stop>> -> <<イエローカード/Yellow Card>>>> | no | human referee
+|| <<非スポーツマン行為/Unsporting Behavior,UNSPORTING_BEHAVIOR_MAJOR>> | 常時/always | <<停止/Stop>> -> <<レッドカード/Red Card>> | no | human referee
 |===
 
 NOTE: (訳者注記) 「リモートコントロール」は大会運営者により提供され、ソフトウェアではなく物理的な旗、その他何らかのデバイスである可能性もある。詳細は<<コミュニケーションフラッグ/Communication Flags, コミュニケーションフラッグに関するルール>>を参照すること。 +
@@ -463,6 +210,8 @@ Remove robot for <<イエローカード/Yellow Card, Yellow Card>>
 |  5 s       | 10 s
 |===
 
+https://raw.githubusercontent.com/RoboCup-SSL/ssl-rules/master/images/SSL_Game_Events.graphml[graphml] 形式で記載されたゲームイベントの図を https://www.yworks.com/yed-live/?file=https://raw.githubusercontent.com/RoboCup-SSL/ssl-rules/master/images/SSL_Game_Events.graphml[yed-live] のページから閲覧できる。 +
+A visualized graph of the game events is stored as https://raw.githubusercontent.com/RoboCup-SSL/ssl-rules/master/images/SSL_Game_Events.graphml[graphml] and can be viewed at https://www.yworks.com/yed-live/?file=https://raw.githubusercontent.com/RoboCup-SSL/ssl-rules/master/images/SSL_Game_Events.graphml[yed-live].
 
 [appendix]
 == ディヴィジョンごとの違い/Differences Between Divisions
