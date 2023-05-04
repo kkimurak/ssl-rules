@@ -638,18 +638,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_ボールの操作ball_manipulation">A.1. ボールの操作/Ball Manipulation</a></li>
 </ul>
 </li>
-<li><a href="#_ゲームイベント表game_event_table">付録 B: ゲームイベント表/Game Event Table</a>
+<li><a href="#_試合の状態game_states">付録 B: 試合の状態/Game States</a></li>
+<li><a href="#_ゲームイベント表game_event_table">付録 C: ゲームイベント表/Game Event Table</a>
 <ul class="sectlevel2">
-<li><a href="#_フィールド外にボールが出た際のイベントevents_for_ball_leaving_the_field">B.1. フィールド外にボールが出た際のイベント/Events For Ball Leaving The Field</a></li>
-<li><a href="#_試合の停止を伴うファウルに関するイベントevents_for_stopping_fouls">B.2. 試合の停止を伴うファウルに関するイベント/Events For Stopping Fouls</a></li>
-<li><a href="#_試合の停止を伴わないファウルに関するイベントevents_for_non_stopping_fouls">B.3. 試合の停止を伴わないファウルに関するイベント/Events For Non Stopping Fouls</a></li>
-<li><a href="#_アウトオブプレイ中のファウルに関するイベントevents_for_fouls_while_ball_out_of_play">B.4. アウトオブプレイ中のファウルに関するイベント/Events For Fouls While Ball Out Of Play</a></li>
-<li><a href="#_ゴールに関するイベントevents_for_scoring_goals">B.5. ゴールに関するイベント/Events For Scoring Goals</a></li>
-<li><a href="#_その他のイベントother_events">B.6. その他のイベント/Other events</a></li>
+<li><a href="#_フィールド外にボールが出た際のイベントevents_for_ball_leaving_the_field">C.1. フィールド外にボールが出た際のイベント/Events For Ball Leaving The Field</a></li>
+<li><a href="#_試合の停止を伴うファウルに関するイベントevents_for_stopping_fouls">C.2. 試合の停止を伴うファウルに関するイベント/Events For Stopping Fouls</a></li>
+<li><a href="#_試合の停止を伴わないファウルに関するイベントevents_for_non_stopping_fouls">C.3. 試合の停止を伴わないファウルに関するイベント/Events For Non Stopping Fouls</a></li>
+<li><a href="#_アウトオブプレイ中のファウルに関するイベントevents_for_fouls_while_ball_out_of_play">C.4. アウトオブプレイ中のファウルに関するイベント/Events For Fouls While Ball Out Of Play</a></li>
+<li><a href="#_ゴールに関するイベントevents_for_scoring_goals">C.5. ゴールに関するイベント/Events For Scoring Goals</a></li>
+<li><a href="#_その他のイベントother_events">C.6. その他のイベント/Other events</a></li>
 </ul>
 </li>
-<li><a href="#_各種時間の概要overview_of_timings">付録 C: 各種時間の概要/Overview of Timings</a></li>
-<li><a href="#_ディヴィジョンごとの違いdifferences_between_divisions">付録 D: ディヴィジョンごとの違い/Differences Between Divisions</a></li>
+<li><a href="#_各種時間の概要overview_of_timings">付録 D: 各種時間の概要/Overview of Timings</a></li>
+<li><a href="#_ディヴィジョンごとの違いdifferences_between_divisions">付録 E: ディヴィジョンごとの違い/Differences Between Divisions</a></li>
 </ul>
 </div>
 </div>
@@ -1864,6 +1865,10 @@ The rule applies to all game types for simplicity.
 <div class="sect1">
 <h2 id="_レフェリーコマンドreferee_commands">5. レフェリーコマンド/Referee Commands</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>レフェリーコマンドの概要と、それらが試合の状態とどのように相互作用するかについては「<a href="#_試合の状態game_states">試合の状態</a>」に記載される。<br>
+An overview of the referee commands and how they interact with the game state, is given in <a href="#_試合の状態game_states">Game States</a>.</p>
+</div>
 <div class="sect2">
 <h3 id="_試合の停止stopping_the_game">5.1. 試合の停止/Stopping The Game</h3>
 <div class="sect3">
@@ -3565,7 +3570,17 @@ Shooting and <a href="#_ドリブルデバイスdribbling_device">dribbling</a> 
 </div>
 </div>
 <div class="sect1">
-<h2 id="_ゲームイベント表game_event_table">付録 B: ゲームイベント表/Game Event Table</h2>
+<h2 id="_試合の状態game_states">付録 B: 試合の状態/Game States</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="images/game-states.svg" alt="game states" width="1097" height="760">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ゲームイベント表game_event_table">付録 C: ゲームイベント表/Game Event Table</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>ゲームイベント表は、各ゲームイベントとその結果をまとめたものである。また、<a href="#_オートレフautomatic_referee">オートレフ</a>の実装が処理できなければならないものを表記する。<br>
@@ -3585,7 +3600,7 @@ Note that the information shown in this table here is incomplete. Please read th
 </table>
 </div>
 <div class="sect2">
-<h3 id="_フィールド外にボールが出た際のイベントevents_for_ball_leaving_the_field">B.1. フィールド外にボールが出た際のイベント/Events For Ball Leaving The Field</h3>
+<h3 id="_フィールド外にボールが出た際のイベントevents_for_ball_leaving_the_field">C.1. フィールド外にボールが出た際のイベント/Events For Ball Leaving The Field</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -3636,7 +3651,7 @@ auto referee</p></td>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_試合の停止を伴うファウルに関するイベントevents_for_stopping_fouls">B.2. 試合の停止を伴うファウルに関するイベント/Events For Stopping Fouls</h3>
+<h3 id="_試合の停止を伴うファウルに関するイベントevents_for_stopping_fouls">C.2. 試合の停止を伴うファウルに関するイベント/Events For Stopping Fouls</h3>
 <div class="paragraph">
 <p>全ての<a href="#_試合の停止を伴うファウルstopping_fouls">試合の停止を伴うファウル</a>は次の結果をもたらす:<br>
 All <a href="#_試合の停止を伴うファウルstopping_fouls">Stopping Fouls</a> result in:</p>
@@ -3748,7 +3763,7 @@ referee &#8594; game controller</p></td>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_試合の停止を伴わないファウルに関するイベントevents_for_non_stopping_fouls">B.3. 試合の停止を伴わないファウルに関するイベント/Events For Non Stopping Fouls</h3>
+<h3 id="_試合の停止を伴わないファウルに関するイベントevents_for_non_stopping_fouls">C.3. 試合の停止を伴わないファウルに関するイベント/Events For Non Stopping Fouls</h3>
 <div class="paragraph">
 <p>全ての<a href="#_試合の停止を伴わないファウルnon_stopping_fouls">試合の停止を伴わないファウル</a>は以下の結果をもたらす:<br>
 All <a href="#_試合の停止を伴わないファウルnon_stopping_fouls">Non Stopping Fouls</a> result in:</p>
@@ -3821,7 +3836,7 @@ auto referee</p></td>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_アウトオブプレイ中のファウルに関するイベントevents_for_fouls_while_ball_out_of_play">B.4. アウトオブプレイ中のファウルに関するイベント/Events For Fouls While Ball Out Of Play</h3>
+<h3 id="_アウトオブプレイ中のファウルに関するイベントevents_for_fouls_while_ball_out_of_play">C.4. アウトオブプレイ中のファウルに関するイベント/Events For Fouls While Ball Out Of Play</h3>
 <div class="paragraph">
 <p>全ての<a href="#_アウトオブプレイ中のファウルfouls_while_ball_out_of_play">アウトオブプレイ中のファウル</a>は以下の結果をもたらす:<br>
 All <a href="#_アウトオブプレイ中のファウルfouls_while_ball_out_of_play">Fouls While Ball Out Of Play</a> result in:</p>
@@ -3891,7 +3906,7 @@ auto referee</p></td>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_ゴールに関するイベントevents_for_scoring_goals">B.5. ゴールに関するイベント/Events For Scoring Goals</h3>
+<h3 id="_ゴールに関するイベントevents_for_scoring_goals">C.5. ゴールに関するイベント/Events For Scoring Goals</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -3941,7 +3956,7 @@ referee &#8594; game controller</p></td>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_その他のイベントother_events">B.6. その他のイベント/Other events</h3>
+<h3 id="_その他のイベントother_events">C.6. その他のイベント/Other events</h3>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 25%;">
@@ -4100,7 +4115,7 @@ referee &#8594; game controller</p></td>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_各種時間の概要overview_of_timings">付録 C: 各種時間の概要/Overview of Timings</h2>
+<h2 id="_各種時間の概要overview_of_timings">付録 D: 各種時間の概要/Overview of Timings</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -4157,7 +4172,7 @@ Remove robot for <a href="#_イエローカードyellow_card">Yellow Card</a></p
 </div>
 </div>
 <div class="sect1">
-<h2 id="_ディヴィジョンごとの違いdifferences_between_divisions">付録 D: ディヴィジョンごとの違い/Differences Between Divisions</h2>
+<h2 id="_ディヴィジョンごとの違いdifferences_between_divisions">付録 E: ディヴィジョンごとの違い/Differences Between Divisions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>これは、<a href="#_ディヴィジョンdivisions">ディヴィジョン</a>Aと<a href="#_ディヴィジョンdivisions">ディヴィジョン</a>Bの違いの完全なリストである。<br>
@@ -4196,7 +4211,7 @@ Division A has shorter timeouts in some situations</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-最終更新 2023-05-05 05:14:07 +0900
+最終更新 2023-05-05 05:24:08 +0900
 </div>
 </div>
 </body>
