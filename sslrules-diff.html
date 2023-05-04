@@ -2854,9 +2854,9 @@ If the yellow card is shown as a result of <a href="#_非スポーツマン行�
 Upon receipt of a yellow card, the number of robots allowed on the field for the penalized team decreases by one. If, after this decrease, the team has more robots than permitted on the field, a robot must be <a href="#_ロボットの交代robot_substitution">taken out</a>.</p>
 </div>
 <div class="paragraph">
-<p>イエローカードは自動的には試合を停止させない。<a href="#_インプレイとアウトオブプレイball_in_and_out_of_play">インプレイ</a>であれば、イエローカードを受けたチームは10秒間で、<a href="#_ロボットの交代robot_substitution">自動的にロボットを退場</a>させることができる。もしその時間でロボットが退場しなかった場合、ゲームは<a href="#_ロボットの交代robot_substitution">手動でのロボット退場</a>のため停止させられる。<br>
+<p>イエローカードは自動的には試合を停止させない。<a href="#_インプレイとアウトオブプレイball_in_and_out_of_play">インプレイ</a>であれば、イエローカードを受けたチームは10秒間で、<a href="#_ロボットの交代robot_substitution">自動的にロボットを退場</a>させることができる。もしその時間でロボットが退場しなかった場合、ゲームは<a href="#_ロボットの交代robot_substitution">手動でのロボット退場</a><span class="diff_delete">のため停止させられる。</span><span class="diff_insert">のため停止させられ、</span><a href="#_フォーススタートforce_start"><span class="diff_insert">フォーススタート</span></a><span class="diff_insert">で続行される。</span><br>
 もう一方のチームが<a href="#_game_controller">game controller</a>に対して申告することでこの10秒の時間制限は無期限に延長され、ゲームは停止されずに続行される。<br>
-A yellow card does not lead to a stop automatically. If the ball is <a href="#_インプレイとアウトオブプレイball_in_and_out_of_play">in play</a>, the team will have 10 seconds to <a href="#_ロボットの交代robot_substitution">automatically remove the robot</a>. If a robot is not taken out within time, the game is stopped for <a href="#_ロボットの交代robot_substitution">manual substitution</a>.
+A yellow card does not lead to a stop automatically. If the ball is <a href="#_インプレイとアウトオブプレイball_in_and_out_of_play">in play</a>, the team will have 10 seconds to <a href="#_ロボットの交代robot_substitution">automatically remove the robot</a>. If a robot is not taken out within time, the game is stopped for <a href="#_ロボットの交代robot_substitution">manual substitution</a> <span class="diff_insert">and </span><span class="diff_insert">continues </span><span class="diff_insert">with </span><span class="diff_insert">a </span><a href="#_フォーススタートforce_start"><span class="diff_insert">Forced </span><span class="diff_insert">Start</span></a>.
 The 10 seconds can be extended indefinitely by the other team by sending an advance choice to the <a href="#_game_controller">game controller</a>.</p>
 </div>
 <div class="admonitionblock note">
@@ -2878,10 +2878,11 @@ This rule implies that after receiving a yellow card, the game might not be auto
 <td class="icon">
 <i class="fa icon-note" title="注記"></i>
 </td>
-<td class="content">
-時間内にロボットを外に出せなかった場合もペナルティーは無い。したがって、ゲームはフォーススタートにより再開する。しかしながら将来的(おそらく2023年)にはこれは変更される: <span class="diff_delete">ロボットを手動で取り除いた場合には、ボールは当該チームのディフェンスエリアから1.5mのミッドライン上に配置され、相手チームのフリーキックとなる。</span><span class="diff_insert">ロボットを手動で取り除いた場合には、ボールは当該チームのディフェンスエリアから1.5mの</span><a href="#_ゴールトゥゴールラインgoal_to_goal_line"><span class="diff_insert">ゴール・トゥ・ゴールライン</span></a><span class="diff_insert">上に配置され、相手チームのフリーキックとなる。</span><br><span class="diff_delete">
+<td class="content"><span class="diff_delete">
+時間内にロボットを外に出せなかった場合もペナルティーは無い。したがって、ゲームはフォーススタートにより再開する。しかしながら将来的(おそらく2023年)にはこれは変更される: </span><span class="diff_delete">ロボットを手動で取り除いた場合には、ボールは当該チームのディフェンスエリアから1.5mのミッドライン上に配置され、相手チームのフリーキックとなる。</span><span class="diff_insert">
+時間内にロボットを外に出せなかった場合もペナルティーは無い。しかしながら将来的には、(たとえば次に示すような)何らかのペナルティが発生する可能性がある: </span><span class="diff_insert">ロボットを手動で取り除いた場合には、ボールは当該チームのディフェンスエリアから1.5mの</span><a href="#_ゴールトゥゴールラインgoal_to_goal_line"><span class="diff_insert">ゴール・トゥ・ゴールライン</span></a><span class="diff_insert">上に配置され、相手チームのフリーキックとなる。</span><br><span class="diff_delete">
 No </span><span class="diff_insert">
-NOTE: </span><span class="diff_insert">No </span>penalty will be given to the team that couldn&#8217;t get the robot out of the field in time. Thus, the game shall be restarted using a force start. However, in the future (probably 2023) this will change: If the robot gets manually substituted, the ball is placed on the <span class="diff_delete">mid </span><span class="diff_delete">line </span><a href="#_ゴールトゥゴールラインgoal_to_goal_line"><span class="diff_insert">goal-to-goal </span><span class="diff_insert">line</span></a> and 1.5 meters away from the teams defense area and the opposing team gets a free kick.
+NOTE: </span><span class="diff_insert">No </span>penalty will be given to the team that couldn&#8217;t get the robot out of the field in time. <span class="diff_delete">Thus, </span><span class="diff_delete">the </span><span class="diff_delete">game </span><span class="diff_delete">shall </span><span class="diff_delete">be </span><span class="diff_delete">restarted </span><span class="diff_delete">using </span><span class="diff_delete">a </span><span class="diff_delete">force </span><span class="diff_delete">start. </span>However, in the future <span class="diff_delete">(probably </span><span class="diff_delete">2023) </span><span class="diff_delete">this </span><span class="diff_insert">there </span>will <span class="diff_delete">change: </span><span class="diff_insert">likely </span><span class="diff_insert">be </span><span class="diff_insert">some </span><span class="diff_insert">penalty: </span>If the robot gets manually substituted, the ball is placed on the <span class="diff_delete">mid </span><span class="diff_delete">line </span><a href="#_ゴールトゥゴールラインgoal_to_goal_line"><span class="diff_insert">goal-to-goal </span><span class="diff_insert">line</span></a> and 1.5 meters away from the teams defense area and the opposing team gets a free kick.
 </td>
 </tr>
 </table>
@@ -4859,7 +4860,7 @@ Division A has shorter timeouts in some situations</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-最終更新 <span class="diff_delete">2022-08-13 </span><span class="diff_delete">16:37:54 </span><span class="diff_insert">2023-05-05 </span><span class="diff_insert">05:29:33 </span>+0900
+最終更新 <span class="diff_delete">2022-08-13 </span><span class="diff_delete">16:37:54 </span><span class="diff_insert">2023-05-05 </span><span class="diff_insert">05:30:48 </span>+0900
 </div>
 </div>
 </body>
