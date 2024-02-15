@@ -24,7 +24,7 @@ The <<ハンドラー/Robot Handler, robot handler>> requests robot substitution
 . <<Game Controller, Game Controller>>が次の機会に<<ハルト/Halt, ハルト>>により試合を停止させる。 +
 The <<Game Controller, game controller>> will <<ハルト/Halt, halt>> the game at the next opportunity.
 . <<ハンドラー/Robot Handler, ハンドラー>>は試合が<<ハルト/Halt, ハルト>>により停止している間、必要に応じてフィールドに入りロボットに触れる。 +
-The <<ハンドラー/Robot Handler, robot handler>> may enter the field and touch robots now, as long as the game is still <<ハルト/Halt, halted>>.
+The <<ハンドラー/Robot Handler, robot handler>> may enter the field and touch robots now.
 . <<ハンドラー/Robot Handler, ハンドラー>>はロボットを外に出す +
 The <<ハンドラー/Robot Handler, robot handler>> takes robots out.
 . <<ハンドラー/Robot Handler, ハンドラー>>は交代が完了したら<<主審/Referee, 主審>>に連絡する +
@@ -39,7 +39,10 @@ The maximum allowed number of robots of the team on the field must not be exceed
 
 .用途/Usage
 いかなる理由であってもロボットの交代ができる。交代の回数に制限はない。 +
-Robots can be substituted for any reason. There is no limit on the number of substitutions.
+Robots can be substituted for any reason.
+A substitution grants the team 10 seconds to take robots out. After that time, a new substitution is started.
+Each team has 5 free substitutions per halftime.
+Every additional substitution will result in an <<Excessive Robot Substitutions, excessive robot substitutions foul>> for the team.
 
 ロボットの交代の意思表示は次のようにして行う： +
 A robot substitution intent can be made by:
