@@ -46,6 +46,7 @@ The field surface will continue for 0.7 meters beyond the <<フィールドラ�
 ラインとラインの間隔はそれぞれの中心から計測される。 +
 The field of play is marked with lines. All lines are 0.01 meters wide and white (paint, spray, white carpet or strong tape). Lines belong to the areas of which they are boundaries.
 Distances between lines are measured from their centers.
+Distances from a robot are measured from its nearest side to the respective measurement point, with an assumed radius of 0.09 m.
 
 ===== フィールドライン/Field Lines
 プレイエリアは4本のラインで定義される。2本の長辺はタッチラインと呼ばれ、2本の短辺はゴールラインと呼ばれる。 +
