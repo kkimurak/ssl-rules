@@ -16,6 +16,9 @@ jobs:
     docker:
       - image: cimg/base:2024.01
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "SHA256:7eyDKzOWyJ7jYCveYvvISsvMYqO7Q0v7lvIsV010iIg"
       - checkout
       - setup_remote_docker
       - run: |
