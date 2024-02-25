@@ -42,6 +42,6 @@ workflows:
   docker:
     jobs:
       - build:
-          filters: { branches: { ignore: master } }
+          filters: { branches: { ignore: master-jp } }
       - build_publish:
-          filters: { branches: { only: master } }
+          filters: { branches: { only: master-jp } }
