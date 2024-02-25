@@ -19,7 +19,7 @@ jobs:
       - checkout
       - run: |
           docker run -v $(pwd):/documents/ -u $(id -u) asciidoctor/docker-asciidoctor asciidoctor -r asciidoctor-diagram -a data-uri -a allow-uri-read *.adoc
-          docker run -v $(pwd):/documents/ -u $(id -u) asciidoctor/docker-asciidoctor asciidoctor-pdf -r asciidoctor-diagram -a allow-uri-read -a script=cjk a pdf-theme=default-with-fallback-font *.adoc
+          docker run -v $(pwd):/documents/ -u $(id -u) asciidoctor/docker-asciidoctor asciidoctor-pdf -r asciidoctor-diagram -a allow-uri-read -a script=cjk -a pdf-theme=default-with-fallback-font *.adoc
       - run: |
           pip install git+https://github.com/anastasia/htmldiffer.git@develop
           latest_year="$(ls -1 pages | grep -E '^[0-9]{4}$' | sort -n | tail -n1)"
