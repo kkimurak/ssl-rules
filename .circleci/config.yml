@@ -1,0 +1,47 @@
+version: 2.1
+
+jobs:
+  build:
+    machine:
+      image: ubuntu-2204:current
+    steps:
+      - checkout
+      - run: |
+          docker run -v $(pwd):/documents/ -u $(id -u) asciidoctor/docker-asciidoctor asciidoctor -r asciidoctor-diagram -a data-uri -a allow-uri-read *.adoc
+          docker run -v $(pwd):/documents/ -u $(id -u) asciidoctor/docker-asciidoctor asciidoctor-pdf -r asciidoctor-diagram -a allow-uri-read -a script=cjk -a pdf-theme=default-with-fallback-font *.adoc
+  build_publish:
+    machine:
+      image: ubuntu-2204:current
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "SHA256:7eyDKzOWyJ7jYCveYvvISsvMYqO7Q0v7lvIsV010iIg"
+      - checkout
+      - run: |
+          docker run -v $(pwd):/documents/ -u $(id -u) asciidoctor/docker-asciidoctor asciidoctor -r asciidoctor-diagram -a data-uri -a allow-uri-read *.adoc
+          docker run -v $(pwd):/documents/ -u $(id -u) asciidoctor/docker-asciidoctor asciidoctor-pdf -r asciidoctor-diagram -a allow-uri-read -a script=cjk a pdf-theme=default-with-fallback-font *.adoc
+      - run: |
+          pip install git+https://github.com/anastasia/htmldiffer.git@develop
+          latest_year="$(ls -1 pages | grep -E '^[0-9]{4}$' | sort -n | tail -n1)"
+          python ./diffRules.py ./pages/${latest_year}/sslrules.html ./sslrules.html > sslrules-diff.html
+      - run: |
+          mkdir /tmp/out
+          mv ./*.html ./*.pdf /tmp/out/
+          cp -r ./pages/* /tmp/out/
+          git checkout gh-pages
+          rm -rf * .asciidoctor
+          mv /tmp/out/* .
+          git config user.name "CircleCI"
+          git config user.email "build-pipeline@circleci.com"
+          git add .
+          git commit -m "Update GitHub Pages"
+          git push
+
+workflows:
+  version: 2
+  docker:
+    jobs:
+      - build:
+          filters: { branches: { ignore: master } }
+      - build_publish:
+          filters: { branches: { only: master } }
