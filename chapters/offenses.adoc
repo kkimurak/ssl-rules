@@ -255,5 +255,5 @@ If a robot keeps interfering the ball placement (for example if it is stuck or c
 試合は相手チームの <<フリーキック/Free Kick, フリーキック>> で再開される。
 もし両チームが同一の<<停止/Stop, ストップゲーム>>中にこのファウルをとられた場合、試合はもとのコマンドで再開される。 +
 If a team has used up their free robot substitution budget, every additional robot substitution is a foul.
-The match is resumed with a <<フリーキック/Free Kick, free kick>> for the opponent team.
+The match is resumed with a <<Corner Kick, corner kick>> for the opponent team.
 If both teams committed this foul in the same <<停止/Stop, stop>>, the match is resumed with the original command.
