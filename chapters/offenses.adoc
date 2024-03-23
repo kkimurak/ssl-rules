@@ -249,3 +249,11 @@ The <<主審/Referee, referee>> is encouraged to call fouls if the non-placing t
 
 NOTE: もしロボットが(たとえば立ち往生を起こした、動作できない、など)干渉を続ける場合、人間の審判はボール配置を止めて手動でボールを配置することが推奨される。 +
 If a robot keeps interfering the ball placement (for example if it is stuck or can not move), the human referee is encouraged to stop the placement and place the ball manually.
+
+===== ロボット交代回数超過/Excessive Robot Substitutions
+チームが自由に行えるロボットの交代権を使い切った場合、それ以降のすべてのロボット交代はファウルとなる。
+試合は相手チームの <<フリーキック/Free Kick, フリーキック>> で再開される。
+もし両チームが同一の<<停止/Stop, ストップゲーム>>中にこのファウルをとられた場合、試合はもとのコマンドで再開される。 +
+If a team has used up their free robot substitution budget, every additional robot substitution is a foul.
+The match is resumed with a <<フリーキック/Free Kick, free kick>> for the opponent team.
+If both teams committed this foul in the same <<停止/Stop, stop>>, the match is resumed with the original command.
