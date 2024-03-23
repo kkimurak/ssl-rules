@@ -13,8 +13,8 @@ Robots can always be taken in and out during game play without notifying the <<�
 The robot is at least partially inside the <<フィールドの表面/Field Surface, field margin>>.
 . ロボットは<<ハーフウェーライン/Halfway Line, ハーフウェーライン>>から1mを超えない位置にある。 +
 The robot is at a distance from the <<ハーフウェーライン/Halfway Line, halfway line>> that must not exceed 1 meter.
-. ボールは<<ハーフウェーライン/Halfway Line, ハーフウェーライン>>から少なくとも2m離れた地点にある。 +
-The ball must be at least 2 meters away from the <<ハーフウェーライン/Halfway Line, halfway line>>.
+. ボールはロボットから少なくとも0.5m離れた地点にある。 +
+The ball must be at least 0.5 meters away from the robot.
 
 加えて、要求があればロボットはどの位置からでも以下の手順に従い除去させられる: +
 Additionally, robots can be taken out from any position on request using the procedure below:
