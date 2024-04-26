@@ -41,7 +41,7 @@ The maximum allowed number of robots of the team on the field must not be exceed
 いかなる理由であってもロボットの交代ができる。
 一度の交代につき、チームは20秒間だけロボットを退場させることができる。この時間を超えた場合、新たにロボット交代の時間が開始される。
 各チームはハーフタイムごとに5回まで罰則なくロボットの交代を行うことができる。　
-これ以降のロボット交代は交代ごとに <<ロボット交代回数超過/Excessive Robot Substitutions, ロボット交代回数超過>>の反則となる。+
+これ以降のロボット交代は交代ごとに <<ロボット交代回数超過/Excessive Robot Substitutions, ロボット交代回数超過>>の反則となる。 +
 Robots can be substituted for any reason.
 A substitution grants the team 20 seconds to take robots out. After that time, a new substitution is started.
 Each team has 5 free substitutions per halftime.
