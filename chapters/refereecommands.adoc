@@ -204,8 +204,8 @@ The procedure of a penalty kick is as follows:
 The ball is placed by the human referee on the <<ペナルティーマーク/Penalty Mark, penalty mark>>.
 . <<ペナルティーキック/Penalty Kick, ペナルティー>>コマンドが発行された時: +
 When the <<ペナルティーキック/Penalty Kick, penalty>> command is issued:
-.. 守備側のキーパーはゴールラインまで移動し、それに触れ続けなければならない。 +
-The defending keeper has to move to the goal line and keep touching it.
+.. 守備側のキーパーはゴールポスト間のゴールラインまで移動し、ゴールラインに触れ続けなければならない。 +
+The defending keeper has to move to the goal line between the goal posts and keep touching the goal line.
 .. 攻撃側のロボット1台はボールに近付くことが許されるが、このときボールに触れてはならない。 +
 One attacking robot is allowed to approach the ball but not allowed to touch the ball.
 .. ペナルティーキックの手順の間、その他の全てのロボットはペナルティーキックの手順に干渉しないよう、ボールから1m以上後方にいなければならない。 +
