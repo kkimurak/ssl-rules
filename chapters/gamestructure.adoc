@@ -143,8 +143,8 @@ The <<主審/Referee, referee>> asks the <<ハンドラー/Robot Handler, robot 
 ただし、両チームが同じ色を希望した場合は、主審は色を任意に割り当てる。この場合、可能であれば、両チームは前半終了後と延長戦の前半終了後に色を入れ替える。 +
 However, if both teams prefer the same color, the referee assigns the colors by chance. In this case, the teams switch the colors after the first half of the match as well as after the first half of the overtime if applicable.
 
-==== Choosing Hulls Colors
-The <<Referee, referee>> asks the <<Robot Handler, robot handlers>> for their preferred <<Robot's Hull Color, hull color>> (dark or bright). If teams agree, the colors are used; otherwise, the referee assigns them by chance.
+==== Choosing Robot Hull Colors
+The <<Referee, referee>> asks the <<Robot Handler, robot handlers>> for their preferred <<Hull Color of Robots, robot hull color>> (dark or bright). If teams agree, the colors are used; otherwise, the referee assigns them by chance.
 
 Robots must keep their assigned color throughout the game.
 
