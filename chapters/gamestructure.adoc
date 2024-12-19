@@ -143,9 +143,11 @@ The <<主審/Referee, referee>> asks the <<ハンドラー/Robot Handler, robot 
 ただし、両チームが同じ色を希望した場合は、主審は色を任意に割り当てる。この場合、可能であれば、両チームは前半終了後と延長戦の前半終了後に色を入れ替える。 +
 However, if both teams prefer the same color, the referee assigns the colors by chance. In this case, the teams switch the colors after the first half of the match as well as after the first half of the overtime if applicable.
 
-==== Choosing Robot Hull Colors
-The <<Referee, referee>> asks the <<Robot Handler, robot handlers>> for their preferred <<Hull Color of Robots, robot hull color>> (dark or bright). If teams agree, the colors are used; otherwise, the referee assigns them by chance.
+==== ロボット外装色の選択/Choosing Robot Hull Colors
+<<主審/Referee, 主審>>は<<ハンドラー/Robot Handler, ハンドラー>>に希望する<<ロボット外装の色/Hull Color of Robots, ロボット外装の色>> (暗もしくは明)を確認する。合意を得られれば、各チームが希望した通りの色を使用する。そうでなければ、主審が任意に色を割り当てる。 +
+The <<主審/Referee, referee>> asks the <<ハンドラー/Robot Handler, robot handlers>> for their preferred <<ロボット外装の色/Hull Color of Robots, robot hull color>> (dark or bright). If teams agree, the colors are used; otherwise, the referee assigns them by chance.
 
+ゲーム中を通じて、ロボットは割り当てられた色を維持しなければならない。 +
 Robots must keep their assigned color throughout the game.
 
 ==== 陣地とキックオフの選択/Choosing Side And Kick-Off
