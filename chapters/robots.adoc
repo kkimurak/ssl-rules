@@ -73,5 +73,5 @@ NOTE: Bluetoothによる通信は周波数チャンネルを固定にできな�
 Bluetooth is not allowed since it cannot be fixed to frequency channels.
 
 ==== 自律性/Autonomy
-ロボットの装備は完全に自律していなくてはならない。試合中、人間のオペレーターは、<<概要/Overview, 休憩>>や<<タイムアウト/Timeouts, タイムアウト>>中以外に、システムに対して一切の情報を入力することはできない。このルールを無視することは、<<非スポーツマン行為/Unsporting Behavior, 非スポーツマン行為>>とみなす。 +
+ロボットの装備は完全に自律していなくてはならない。試合中、人間のオペレーターは、<<概要/Overview, 休憩>>や<<タイムアウト/Timeouts, タイムアウト>>中以外に、システムに対して一切の情報を入力することはできない。加えて、「<<ロボットの交代/Robot Substitution, ロボットの交代>>」で述べられているフィールド外への除去、もしくはフィールド内への投入を除いて、試合中のいかなる段階においてもロボットは手動で動かされてはならない。このルールを無視することは、<<非スポーツマン行為/Unsporting Behavior, 非スポーツマン行為>>とみなす。 +
 The robotic equipment has to be fully autonomous. Human operators are not permitted to enter any information to the system during a match, except in <<概要/Overview, breaks>> or during a <<タイムアウト/Timeouts, timeout>>. Additionally, robots may not be manually moved during any phase of the match, except for moving robots out of the field, or into the field as described in <<Robot Substitution, Robot Substitution>>. Disregarding this rule is considered <<非スポーツマン行為/Unsporting Behavior, unsporting behavior>>.
