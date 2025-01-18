@@ -1321,8 +1321,8 @@ Bluetooth is not allowed since it cannot be fixed to frequency channels.
 <div class="sect3">
 <h4 id="_自律性autonomy">3.2.6. 自律性/Autonomy</h4>
 <div class="paragraph">
-<p>ロボットの装備は完全に自律していなくてはならない。試合中、人間のオペレーターは、<a href="#_概要overview">休憩</a>や<a href="#_タイムアウトtimeouts">タイムアウト</a>中以外に、システムに対して一切の情報を入力することはできない。このルールを無視することは、<a href="#_非スポーツマン行為unsporting_behavior">非スポーツマン行為</a>とみなす。<br>
-The robotic equipment has to be fully autonomous. Human operators are not permitted to enter any information to the system during a match, except in <a href="#_概要overview">breaks</a> or during a <a href="#_タイムアウトtimeouts">timeout</a>. Disregarding this rule is considered <a href="#_非スポーツマン行為unsporting_behavior">unsporting behavior</a>.</p>
+<p>ロボットの装備は完全に自律していなくてはならない。試合中、人間のオペレーターは、<a href="#_概要overview">休憩</a>や<a href="#_タイムアウトtimeouts">タイムアウト</a>中以外に、システムに対して一切の情報を入力することはできない。加えて、「<a href="#_ロボットの交代robot_substitution">ロボットの交代</a>」で述べられているフィールド外への除去、もしくはフィールド内への投入を除いて、試合中のいかなる段階においてもロボットは手動で動かされてはならない。このルールを無視することは、<a href="#_非スポーツマン行為unsporting_behavior">非スポーツマン行為</a>とみなす。<br>
+The robotic equipment has to be fully autonomous. Human operators are not permitted to enter any information to the system during a match, except in <a href="#_概要overview">breaks</a> or during a <a href="#_タイムアウトtimeouts">timeout</a>. Additionally, robots may not be manually moved during any phase of the match, except for moving robots out of the field, or into the field as described in <a href="#Robot Substitution">Robot Substitution</a>. Disregarding this rule is considered <a href="#_非スポーツマン行為unsporting_behavior">unsporting behavior</a>.</p>
 </div>
 </div>
 </div>
@@ -1798,6 +1798,10 @@ As a result, the time needed for a match is much greater than the playing time.
 <div class="paragraph">
 <p>タイムアウトを取りたい時、<a href="#_ハンドラーrobot_handler">ハンドラー</a>は主審に確認をとらなければならない。タイムアウトは<a href="#_概要overview">休憩</a>のように扱われ、両チームとも自らのソフトウェアとハードウェアの修正を行うことが許可されている(「<a href="#_自律性autonomy">自律性</a>」を参照)。<br>
 The <a href="#_ハンドラーrobot_handler">robot handler</a> has to ask the referee for a timeout. Timeouts are handled like <a href="#_概要overview">breaks</a>, meaning that both teams are allowed to make modifications to their software and hardware (see <a href="#_自律性autonomy">Autonomy</a>).</p>
+</div>
+<div class="paragraph">
+<p>タイムアウト中に物理的な接触があったロボットは、フィールド外に除去されなければならない。これは除去したものと同一のタイムアウト中であっても、「<a href="#_ロボットの交代robot_substitution">ロボットの交代</a>」に記載されたエリアからフィールド内に投入することができる。<br>
+Any robot that has been physically interacted with during a timeout must be taken out of the field. It can be brought in again, also during the same timeout, via the area outlined in <a href="#_ロボットの交代robot_substitution">Robot Substitution</a>.</p>
 </div>
 <div class="paragraph">
 <p>どちらのチームも競技開始から4回までのタイムアウトが割り当てられている。すべてのタイムアウトの合計は300秒まで許されている。タイムアウトはstop game中のみ取得することができる。時間は<a href="#_game_controller_operator">game controller operator</a>によって監視と記録がされている。<br>
@@ -4068,7 +4072,7 @@ Division A has shorter timeouts in some situations</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-最終更新 2025-01-18 06:22:26 UTC
+最終更新 2025-01-18 06:26:09 UTC
 </div>
 </div>
 </body>
