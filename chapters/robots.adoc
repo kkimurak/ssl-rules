@@ -25,6 +25,33 @@ The <<主審/Referee, referee>> has to force a team to remove a robot from the f
 ロボットはいかなる時点においても、直径0.18m、高さ0.15m以下の大きさでなければならない。さらに、ロボットの上面はstandard patternのサイズおよび表面の制約を満たさなければならない。 +
 A robot must fit inside a 0.18 meters wide and 0.15 meters high cylinder at any point in time. Additionally, the top of the robot must adhere to the standard pattern size and surface constraints.
 
+==== ロボット外装の色/Hull Color of Robots
+試合中の明瞭さと効果的な識別を確保するために、ロボット外装の色付けには次のルールが適用される: +
+To ensure clarity and effective identification during gameplay, the following rules apply to the coloring of robot hulls:
+
+暗配色と明配色: +
+Bright and dark color scheme:
+
+
+* チームの全ロボットは、明配色と暗配色それぞれ1種類の交換可能な外装を備えなければならない。 +
+All robots from a team must have interchangeable hull colors: one bright and one dark.
+* この2色はチーム内の全ロボットについて同一でなければならない。 +
+These two colors must be the same for all robots in a team.
+* その色はロボットの最大高さのうち、少なくとも6cmを垂直方向に覆わなくてはならない。 +
+The color must vertically cover at least 6 cm of the robot's maximum height.
+
+被覆率の要求仕様: +
+Coverage requirements:
+
+* visionシステムへの干渉を防ぐため、ロボット外装は反射性であってはならない。 +
+The robot hull must not be reflective to avoid interfering with the vision system.
+* ロボット外装の色は<<Vision Pattern, Visionパターン>>や<<ボール/Ball, ボール>>に用いられる色と近しい色であってはならない。 +
+The robot hull must avoid colors close to the ones used at <<Vision Pattern, vision pattern>> and <<ボール/Ball, ball>>. 
+* 試合中に落ちたりはがれたりしないように、色は適切に付着し、耐久性を維持しなければならない。カラーカバーが落下した場合は、それに応じた罰則が課せられる (「<<転倒や部品の脱落/Tipping Over Or Dropping Parts, 転倒や部品の脱落>>」を参照)。 +
+Colors must adhere properly and remain durable to prevent dropping or peeling during the match. If the color cover drops, it will be penalized accordingly (see <<転倒や部品の脱落/Tipping Over Or Dropping Parts, Tipping Over Or Dropping Parts>>).
+
+NOTE: (訳者注記) ここで「外装(hull)」とは「ガワ」「カバー」「シェル」などと呼称される場合もある、ロボット外観のうち上面をのぞいた側面を覆っている箇所を指す。
+
 ==== ドリブルデバイス/Dribbling Device
 ボールを積極的にスピンさせてボールをロボットに接触し続けさせるためのドリブルデバイスは以下の条件を満たす場合のみ許可される。 +
 Dribbling devices that actively exert spin on the ball, which keep the ball in contact with the robot are permitted under certain conditions:
@@ -74,4 +101,4 @@ Bluetooth is not allowed since it cannot be fixed to frequency channels.
 
 ==== 自律性/Autonomy
 ロボットの装備は完全に自律していなくてはならない。試合中、人間のオペレーターは、<<概要/Overview, 休憩>>や<<タイムアウト/Timeouts, タイムアウト>>中以外に、システムに対して一切の情報を入力することはできない。加えて、「<<ロボットの交代/Robot Substitution, ロボットの交代>>」で述べられているフィールド外への除去、もしくはフィールド内への投入を除いて、試合中のいかなる段階においてもロボットは手動で動かされてはならない。このルールを無視することは、<<非スポーツマン行為/Unsporting Behavior, 非スポーツマン行為>>とみなす。 +
-The robotic equipment has to be fully autonomous. Human operators are not permitted to enter any information to the system during a match, except in <<概要/Overview, breaks>> or during a <<タイムアウト/Timeouts, timeout>>. Additionally, robots may not be manually moved during any phase of the match, except for moving robots out of the field, or into the field as described in <<Robot Substitution, Robot Substitution>>. Disregarding this rule is considered <<非スポーツマン行為/Unsporting Behavior, unsporting behavior>>.
+The robotic equipment has to be fully autonomous. Human operators are not permitted to enter any information to the system during a match, except in <<概要/Overview, breaks>> or during a <<タイムアウト/Timeouts, timeout>>. Additionally, robots may not be manually moved during any phase of the match, except for moving robots out of the field, or into the field as described in <<ロボットの交代/Robot Substitution, Robot Substitution>>. Disregarding this rule is considered <<非スポーツマン行為/Unsporting Behavior, unsporting behavior>>.
