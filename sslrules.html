@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
-<meta name="author" content="2025-01-18">
+<meta name="author" content="2025-02-08">
 <title>RoboCup小型機リーグルール</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -439,7 +439,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 <h1>RoboCup小型機リーグルール</h1>
 <div class="details">
-<span id="author" class="author">2025-01-18</span><br>
+<span id="author" class="author">2025-02-08</span><br>
 </div>
 <div id="toc" class="toc">
 <div id="toctitle">目次</div>
@@ -495,10 +495,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#_安全性safety">3.2.1. 安全性/Safety</a></li>
 <li><a href="#_形状shape">3.2.2. 形状/Shape</a></li>
-<li><a href="#_ドリブルデバイスdribbling_device">3.2.3. ドリブルデバイス/Dribbling Device</a></li>
-<li><a href="#_vision_pattern">3.2.4. Vision Pattern</a></li>
-<li><a href="#_無線通信radio_communication">3.2.5. 無線通信/Radio Communication</a></li>
-<li><a href="#_自律性autonomy">3.2.6. 自律性/Autonomy</a></li>
+<li><a href="#_ロボット外装の色hull_color_of_robots">3.2.3. ロボット外装の色/Hull Color of Robots</a></li>
+<li><a href="#_ドリブルデバイスdribbling_device">3.2.4. ドリブルデバイス/Dribbling Device</a></li>
+<li><a href="#_vision_pattern">3.2.5. Vision Pattern</a></li>
+<li><a href="#_無線通信radio_communication">3.2.6. 無線通信/Radio Communication</a></li>
+<li><a href="#_自律性autonomy">3.2.7. 自律性/Autonomy</a></li>
 </ul>
 </li>
 </ul>
@@ -523,8 +524,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_試合結果シートgame_result_sheet">4.3.1. 試合結果シート/Game Result Sheet</a></li>
 <li><a href="#_ネットワークのテストtesting_the_network">4.3.2. ネットワークのテスト/Testing The Network</a></li>
 <li><a href="#_チームカラーの選択choosing_team_colors">4.3.3. チームカラーの選択/Choosing Team Colors</a></li>
-<li><a href="#_陣地とキックオフの選択choosing_side_and_kick_off">4.3.4. 陣地とキックオフの選択/Choosing Side And Kick-Off</a></li>
-<li><a href="#_ゴールキーパーのidの選択choosing_keeper_id">4.3.5. ゴールキーパーのIDの選択/Choosing Keeper Id</a></li>
+<li><a href="#_ロボット外装色の選択choosing_robot_hull_colors">4.3.4. ロボット外装色の選択/Choosing Robot Hull Colors</a></li>
+<li><a href="#_陣地とキックオフの選択choosing_side_and_kick_off">4.3.5. 陣地とキックオフの選択/Choosing Side And Kick-Off</a></li>
+<li><a href="#_ゴールキーパーのidの選択choosing_keeper_id">4.3.6. ゴールキーパーのIDの選択/Choosing Keeper Id</a></li>
 </ul>
 </li>
 <li><a href="#_ゲームステージgame_stages">4.4. ゲームステージ/Game Stages</a>
@@ -1224,7 +1226,66 @@ A robot must fit inside a 0.18 meters wide and 0.15 meters high cylinder at any 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_ドリブルデバイスdribbling_device">3.2.3. ドリブルデバイス/Dribbling Device</h4>
+<h4 id="_ロボット外装の色hull_color_of_robots">3.2.3. ロボット外装の色/Hull Color of Robots</h4>
+<div class="paragraph">
+<p>試合中の明瞭さと効果的な識別を確保するために、ロボット外装の色付けには次のルールが適用される:<br>
+To ensure clarity and effective identification during gameplay, the following rules apply to the coloring of robot hulls:</p>
+</div>
+<div class="paragraph">
+<p>暗配色と明配色:<br>
+Bright and dark color scheme:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>チームの全ロボットは、明配色と暗配色それぞれ1種類の交換可能な外装を備えなければならない。<br>
+All robots from a team must have interchangeable hull colors: one bright and one dark.</p>
+</li>
+<li>
+<p>この2色はチーム内の全ロボットについて同一でなければならない。<br>
+These two colors must be the same for all robots in a team.</p>
+</li>
+<li>
+<p>その色はロボットの最大高さのうち、少なくとも6cmを垂直方向に覆わなくてはならない。<br>
+The color must vertically cover at least 6 cm of the robot&#8217;s maximum height.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>被覆率の要求仕様:<br>
+Coverage requirements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>visionシステムへの干渉を防ぐため、ロボット外装は反射性であってはならない。<br>
+The robot hull must not be reflective to avoid interfering with the vision system.</p>
+</li>
+<li>
+<p>ロボット外装の色は<a href="#_vision_pattern">Visionパターン</a>や<a href="#_ボールball">ボール</a>に用いられる色と近しい色であってはならない。<br>
+The robot hull must avoid colors close to the ones used at <a href="#_vision_pattern">vision pattern</a> and <a href="#_ボールball">ball</a>.</p>
+</li>
+<li>
+<p>試合中に落ちたりはがれたりしないように、色は適切に付着し、耐久性を維持しなければならない。カラーカバーが落下した場合は、それに応じた罰則が課せられる (「<a href="#_転倒や部品の脱落tipping_over_or_dropping_parts">転倒や部品の脱落</a>」を参照)。<br>
+Colors must adhere properly and remain durable to prevent dropping or peeling during the match. If the color cover drops, it will be penalized accordingly (see <a href="#_転倒や部品の脱落tipping_over_or_dropping_parts">Tipping Over Or Dropping Parts</a>).</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="注記"></i>
+</td>
+<td class="content">
+(訳者注記) ここで「外装(hull)」とは「ガワ」「カバー」「シェル」などと呼称される場合もある、ロボット外観のうち上面をのぞいた側面を覆っている箇所を指す。
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_ドリブルデバイスdribbling_device">3.2.4. ドリブルデバイス/Dribbling Device</h4>
 <div class="paragraph">
 <p>ボールを積極的にスピンさせてボールをロボットに接触し続けさせるためのドリブルデバイスは以下の条件を満たす場合のみ許可される。<br>
 Dribbling devices that actively exert spin on the ball, which keep the ball in contact with the robot are permitted under certain conditions:</p>
@@ -1251,7 +1312,7 @@ A robot must not take full control of the ball by removing all of its degrees of
 </div>
 </div>
 <div class="sect3">
-<h4 id="_vision_pattern">3.2.4. Vision Pattern</h4>
+<h4 id="_vision_pattern">3.2.5. Vision Pattern</h4>
 <div class="paragraph">
 <p>すべての参加チームは、<a href="#_vision">共有Visionシステム</a>による動作条件に従わなければならない。チームは標準化されたカラーとパターンをロボットの頭部にセットする必要がある。<br>
 All participating teams must adhere to the given operating requirements of the <a href="#_vision">shared vision system</a>. In particular, teams are required to use a certain set of standardized colors and patterns on top of their robots.</p>
@@ -1295,7 +1356,7 @@ Teams are encouraged to prefer color assignments with ids 0 to 7 because they ha
 </div>
 </div>
 <div class="sect3">
-<h4 id="_無線通信radio_communication">3.2.5. 無線通信/Radio Communication</h4>
+<h4 id="_無線通信radio_communication">3.2.6. 無線通信/Radio Communication</h4>
 <div class="paragraph">
 <p>無線通信を使用する参加者は、通信の方法、電力、周波数を<a href="#_組織委員会organizing_committee">組織委員会</a>に通知するものとする。<a href="#_組織委員会organizing_committee">組織委員会</a>は、登録後のいかなる変更についてもできるだけ早く通知を受けなければならない。混線を回避するために、試合の前にチームは2つの周波数から選択出来るようにしなければならない。無線通信の形式は、競技が開催される国の法的規則に従うものとする。現地の法律を守ることは、ロボカップ委員会ではなく競技するチームが責任を負うものとする。<br>
 Participants using wireless communications must notify the <a href="#_組織委員会organizing_committee">organizing committee</a> of the method of wireless communication, power, and frequency. The <a href="#_組織委員会organizing_committee">organizing committee</a> must be notified of any change after registration as soon as possible. In order to avoid interference, a team must be able to select from two carrier frequencies before the match. The type of wireless communication has to follow legal regulations of the country where the competition is held. Compliance with local laws is the responsibility of the competing teams, not the RoboCup Federation.</p>
@@ -1319,10 +1380,10 @@ Bluetooth is not allowed since it cannot be fixed to frequency channels.
 </div>
 </div>
 <div class="sect3">
-<h4 id="_自律性autonomy">3.2.6. 自律性/Autonomy</h4>
+<h4 id="_自律性autonomy">3.2.7. 自律性/Autonomy</h4>
 <div class="paragraph">
 <p>ロボットの装備は完全に自律していなくてはならない。試合中、人間のオペレーターは、<a href="#_概要overview">休憩</a>や<a href="#_タイムアウトtimeouts">タイムアウト</a>中以外に、システムに対して一切の情報を入力することはできない。加えて、「<a href="#_ロボットの交代robot_substitution">ロボットの交代</a>」で述べられているフィールド外への除去、もしくはフィールド内への投入を除いて、試合中のいかなる段階においてもロボットは手動で動かされてはならない。このルールを無視することは、<a href="#_非スポーツマン行為unsporting_behavior">非スポーツマン行為</a>とみなす。<br>
-The robotic equipment has to be fully autonomous. Human operators are not permitted to enter any information to the system during a match, except in <a href="#_概要overview">breaks</a> or during a <a href="#_タイムアウトtimeouts">timeout</a>. Additionally, robots may not be manually moved during any phase of the match, except for moving robots out of the field, or into the field as described in <a href="#Robot Substitution">Robot Substitution</a>. Disregarding this rule is considered <a href="#_非スポーツマン行為unsporting_behavior">unsporting behavior</a>.</p>
+The robotic equipment has to be fully autonomous. Human operators are not permitted to enter any information to the system during a match, except in <a href="#_概要overview">breaks</a> or during a <a href="#_タイムアウトtimeouts">timeout</a>. Additionally, robots may not be manually moved during any phase of the match, except for moving robots out of the field, or into the field as described in <a href="#_ロボットの交代robot_substitution">Robot Substitution</a>. Disregarding this rule is considered <a href="#_非スポーツマン行為unsporting_behavior">unsporting behavior</a>.</p>
 </div>
 </div>
 </div>
@@ -1607,14 +1668,21 @@ However, if both teams prefer the same color, the referee assigns the colors by 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_陣地とキックオフの選択choosing_side_and_kick_off">4.3.4. 陣地とキックオフの選択/Choosing Side And Kick-Off</h4>
+<h4 id="_ロボット外装色の選択choosing_robot_hull_colors">4.3.4. ロボット外装色の選択/Choosing Robot Hull Colors</h4>
+<div class="paragraph">
+<p><a href="#_ロボット外装の色hull_color_of_robots">ロボット外装の色</a> (暗もしくは明)は<a href="#_チームカラーの選択choosing_team_colors">チームカラー</a>と一致する必要がある。チームカラーが青であるチームは暗配色の外装を、黄であるチームは明配色の外装を使用する。試合中にチームカラーが変更される場合は、外装の色もまた変更しなければならない。<br>
+The <a href="#_ロボット外装の色hull_color_of_robots">robot hull color</a> (dark or bright) should match the <a href="#_チームカラーの選択choosing_team_colors">team&#8217;s color</a>. The blue team uses the dark hulls, while the yellow team uses light hulls. If teams switch color during the game, they must switch also hull colors.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_陣地とキックオフの選択choosing_side_and_kick_off">4.3.5. 陣地とキックオフの選択/Choosing Side And Kick-Off</h4>
 <div class="paragraph">
 <p><a href="#_主審referee">主審</a>は両チームの<a href="#_ハンドラーrobot_handler">ハンドラー</a>と一緒にコイントスを行う。コイントスの勝者が前半戦で攻めるゴールを選ぶ。もう一方のチームが前半戦開始時の<a href="#_キックオフkick_off">キックオフ</a>を行う。<br>
 The <a href="#_主審referee">referee</a> tosses a coin with both <a href="#_ハンドラーrobot_handler">robot handlers</a>. The winning team chooses the goal it will attack in the first half of the match. The other team takes the <a href="#_キックオフkick_off">kick-off</a> to start the match.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_ゴールキーパーのidの選択choosing_keeper_id">4.3.5. ゴールキーパーのIDの選択/Choosing Keeper Id</h4>
+<h4 id="_ゴールキーパーのidの選択choosing_keeper_id">4.3.6. ゴールキーパーのIDの選択/Choosing Keeper Id</h4>
 <div class="paragraph">
 <p><a href="#_主審referee">主審</a>は両チームの<a href="#_ハンドラーrobot_handler">ハンドラー</a>にどのロボットをキーパーとして使用するつもりなのか確認し、<a href="#_game_controller_operator">game controller operator</a>に情報を連絡する。<br>
 The <a href="#_主審referee">referee</a> asks both <a href="#_ハンドラーrobot_handler">robot handlers</a> which robot they will use as the keeper and forwards this information to the <a href="#_game_controller_operator">game controller operator</a>.</p>
@@ -4072,7 +4140,7 @@ Division A has shorter timeouts in some situations</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-最終更新 2025-01-18 06:26:09 UTC
+最終更新 2025-02-08 11:02:03 UTC
 </div>
 </div>
 </body>
