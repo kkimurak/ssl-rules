@@ -93,15 +93,23 @@ red card>>.
 ==== 試合の停止を伴うファウル/Stopping Fouls
 このセクションにあるファウルは試合を<<停止/Stop, 停止>>させ、反則が発生した時点でボールがあった位置からの<<フリーキック/Free Kick, フリーキック>>で再開する。 +
 Fouls in this section cause the game to <<停止/Stop, stop>> and then resume
-with a <<フリーキック/Free Kick, free kick>> from the position where the ball was
+with a <<フリーキック/Free Kick, free kick>> for the opposite team from the position where the ball was
 located when the foul began happening.
 
 ===== ロボットの相手ディフェンスエリアへの極端な接近/Robot Too Close To Opponent Defense Area
 <<試合の再開/Resuming The Game, 試合を再開する>>前の、<<停止/Stop, 停止>>、<<フリーキック/Free Kick, フリーキック>>の間、すべてのロボットは相手の<<ディフェンスエリア/Defense Area, ディフェンスエリア>>から少なくとも0.2m以上離れていなければならない。 +
-During <<停止/Stop, stop>> and <<フリーキック/Free Kick, free kicks>>, before the ball <<試合の再開/Resuming The Game, has entered play>>, all robots have to keep at least 0.2 meters distance to the opponent <<ディフェンスエリア/Defense Area, defense area>>.
+During <<停止/Stop, stop>> and <<フリーキック/Free Kick, free kicks>>, before the ball <<試合の再開/Resuming The Game, has entered play>>,
+all robots have to keep at least 0.2 meters distance to the opponent <<ディフェンスエリア/Defense Area, defense area>>.
 
 ロボットが相手ディフェンスエリアから離れるため、2秒間の猶予が設けられる。 +
 There is a grace period of 2 seconds for the robots to move away from the opponent defense area.
+
+The game is immediately halted after every second such foul committed by the same team.
+
+NOTE: If the foul is committed during a <<Free Kick, free kick>>, the game is still stopped.
+The grace period is restarted after the first foul of the same team.
+Both fouls count towards the foul counter.
+There are no individual fouls per robot.
 
 ===== プッシング/Pushing
 あるロボットが相手のロボットに外力を加えて押していて、両方のロボットがボールもしくは互いに接触している(たとえば互いのロボットが相手のロボットの方向に移動している)時、これはプッシングの反則となる。 +
