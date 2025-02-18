@@ -98,8 +98,7 @@ located when the foul began happening.
 
 ===== ロボットの相手ディフェンスエリアへの極端な接近/Robot Too Close To Opponent Defense Area
 <<試合の再開/Resuming The Game, 試合を再開する>>前の、<<停止/Stop, 停止>>、<<フリーキック/Free Kick, フリーキック>>の間、すべてのロボットは相手の<<ディフェンスエリア/Defense Area, ディフェンスエリア>>から少なくとも0.2m以上離れていなければならない。 +
-During <<停止/Stop, stop>> and <<フリーキック/Free Kick, free kicks>>, before the ball <<試合の再開/Resuming The Game, has entered play>>,
-all robots have to keep at least 0.2 meters distance to the opponent <<ディフェンスエリア/Defense Area, defense area>>.
+During <<停止/Stop, stop>> and <<フリーキック/Free Kick, free kicks>>, before the ball <<試合の再開/Resuming The Game, has entered play>>, all robots have to keep at least 0.2 meters distance to the opponent <<ディフェンスエリア/Defense Area, defense area>>.
 
 ロボットが相手ディフェンスエリアから離れるため、2秒間の猶予が設けられる。 +
 There is a grace period of 2 seconds for the robots to move away from the opponent defense area.
